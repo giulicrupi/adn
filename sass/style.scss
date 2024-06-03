@@ -1,0 +1,534 @@
+
+$azul: #0071CE;
+$azulClaro: #3CB4E5;
+$amarelo: #FFD100;
+$vermelho: #D02C2F;
+$whats: #22D143;
+$cinza: #2F2F2F;
+
+
+body{
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 300;
+}
+p{
+	margin-bottom: 0;
+}
+
+.menu{
+	background: white;
+	height: 14vh;
+    @media(min-width: 981px){
+     max-width: 1800px;
+     margin: auto;	   	
+    }		
+	.container{
+		max-width: 95%;
+		.navbar-brand{
+			width: 10%;
+			margin-right: 0;
+		}
+		.collapse{
+			padding-left: 5%;
+			width: 40%;
+			position: relative;
+			ul{
+				li{
+					a{
+						color: black;
+						font-weight: 500;
+						transition: .5s;
+						opacity: 1;
+				        padding-right: 1rem;
+				        padding-left: 1rem;						
+						&:hover{
+							opacity: .7;
+						}
+					}
+				}
+			}
+		}
+		.botoes{
+		    width: 34%;
+		    display: flex;
+		    align-items: center;
+		    justify-content: flex-end;
+		    .cliente,.whats{
+				display: flex;
+			    align-items: center;
+			    width: 45%;
+			    justify-content: center;
+			    margin: 0 2vh;
+			    transition: .5s;
+			    cursor: pointer;
+
+			    
+		    }
+		    .whats{
+		    	margin-right: 0;
+		    }
+		    .cliente{
+		    	border: 1px solid $azul;
+		    	border-radius: 50px;
+		    	padding: 0.5% 0%;
+		    	    height: 5.5vh;
+		    	p{
+		    		font-weight: 500;
+		    		color: $azul;
+		    		margin-left: .5vh;
+		    	}
+		    	&:hover{
+		    		background: $azul;
+		    		p{
+		    			color: white;
+		    		}
+		    		.icon{
+		    			filter: brightness(0)invert(1);
+		    		}
+		    	}
+		    }
+		    .whats{
+		    	background:$whats;
+		    	border: 1px solid $whats;
+		    	border-radius: 50px;
+		    	padding: 0.5% 0%;
+		    	    height: 5.5vh;
+		    	p{
+		    		font-weight: 500;
+		    		color: white;
+		    		margin-left: .5vh;
+		    	}
+		    }
+		}
+	}
+}
+
+.banner-home{
+	position: relative;
+    @media(min-width: 981px){
+     max-width: 1800px;
+     margin: auto;	   	
+    }	
+	.banner{
+		margin-top: 10vh;
+		.slide{
+			height: 90vh;
+			.centro{
+				height: 100%;
+				background-size: cover!important;
+				background-position: bottom!important;
+				.overlay{
+					background: linear-gradient(90deg, rgb(0 0 0 / 39%), transparent 70%);
+					height: 100%;
+					display: flex;
+					align-items: center;
+					padding-top: 5%;
+					.container{
+						width: 100%;
+						color: white;
+						max-width: 79%;
+						.row{
+							width: 35%;
+							.local{
+								display: flex;
+								align-items: center;
+								background: $azul;
+								justify-content: center;
+								height: 4.5vh;
+								border-radius: 50px;
+								.icon{
+									margin-right: 1vh;
+								}
+								p{
+									font-size: 15px;
+								}
+							}
+							.categoria{
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								align-items: center;
+								background: $amarelo;
+								text-align: center;
+								height: 4.5vh;
+								border-radius: 50px;
+								color: black;
+								p{
+									font-size: 15px;
+								}
+							}
+						}
+						.title{
+							font-size: 63px;
+							font-weight: 700;
+							margin: 1% 0;
+						}
+						.comandos{
+							width: 45%;
+							display: flex;
+							align-items: center;
+							.quarto{
+								width: 33.333%;
+								display: flex;
+								align-items: center;
+								.icon{
+									width: 4vh;
+									height: 4vh;
+									background: $azulClaro;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									border-radius: 4px;
+									margin-right: 1.5vh;
+								}
+								p{
+									font-weight: 400;
+									font-size: 21px;
+								}
+							}
+						}
+						.botao{
+							margin-top: 3%;
+							button{
+								background: $vermelho;
+								border: 1px solid $vermelho;
+								color: white;
+								width: 30%;
+								height: 7vh;
+								border-radius: 50px;
+								font-size: 20px;
+								font-weight: 600;
+								span{
+									margin-right: 3vh;
+								}
+								transition: .5s;
+								&:hover{
+									background: white;
+									border-color: white;
+									color: black;
+									svg{
+										filter: brightness(0);
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+	.slick-arrow{
+		background: $azul;
+		width: 8vh;
+		height: 8vh;
+		right: 4%;
+		img{
+			width: 50%;
+		}
+		&.leftButton{
+			bottom: 51%;
+		}
+		&.rightButton {
+			bottom: 40%;
+		}
+		&.slick-disabled{
+		    opacity: .5;
+		    pointer-events: none;
+		    cursor: default;			
+		}
+	}
+	position: relative;
+}
+
+input,textarea,button,a, select{
+	&:focus{
+		outline: none;
+	}
+}
+
+.titulo{
+	font-size: 35px;
+	line-height: 120%;
+	font-weight: 600;
+	color: $cinza;
+	span{
+		color: $azul;
+	}	
+}
+.sect1{
+	padding: 10vh 0;
+    @media(min-width: 981px){
+     max-width: 1800px;
+     margin: auto;	   	
+    }	
+	.container{
+		max-width: 79%;
+		.row{
+			align-items: center;
+			.title{
+				@extend .titulo;
+			}
+		}
+	}
+}
+
+/* Container para o select customizado */
+.form-sec {
+	  position: relative;
+	  display: inline-block;
+	  width: 60%;
+	  margin-top: 3%;
+		 select {
+		  appearance: none; /* Para navegadores modernos */
+		  -webkit-appearance: none; /* Para navegadores baseados em WebKit */
+		  -moz-appearance: none; /* Para Firefox */
+		  background: none;
+		  border: 1px solid #ccc;
+		  padding: 2% 8%;
+		  padding-right: 30px; /* Espaço para o ícone personalizado */
+		  font-size: 16px;
+		  width: 100%;
+		  border-radius: 50px;
+		  color: $azul;
+		  font-weight: 600;
+		  font-size: 18px;
+		} 
+		&::after {
+		  content: '▼'; /* Seta personalizada */
+		  position: absolute;
+		  top: 50%;
+		  right: 6%;
+		  transform: translateY(-50%);
+		  pointer-events: none; 
+		  color: $azulClaro;
+		}
+
+}
+a{
+	color: inherit;
+	&:hover{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.sect2{
+	padding: 10vh 0;
+	.container{
+		max-width: 79%;
+		.title{
+			@extend .titulo;
+		}
+		.linha{
+			display: flex;
+			align-items: center;
+			.title{
+				display: flex;
+				align-items: center;
+				width: 80%;
+				.filtro{
+					padding-left:4%;
+					width: 27%;
+					font-size: 16px;
+					  position: relative;
+					  display: inline-block;	
+					 select {
+					  appearance: none; /* Para navegadores modernos */
+					  -webkit-appearance: none; /* Para navegadores baseados em WebKit */
+					  -moz-appearance: none; /* Para Firefox */
+					  background: none;
+					  border: 1px solid #ccc;
+					  padding: 1% 8%;
+					  padding-right: 30px; /* Espaço para o ícone personalizado */
+					  font-size: 16px;
+					  width: 100%;
+					  border-radius: 50px;
+					  color: black;
+					  font-weight: 600;
+					  font-size: 16px;
+					} 
+					&::after {
+					  content: '▼'; /* Seta personalizada */
+					  position: absolute;
+					  top: 50%;
+					  right: 6%;
+					  transform: translateY(-50%);
+					  pointer-events: none; 
+					  color: black;
+					}					  				
+				}
+			}
+			.botao{
+			    width: 15%;
+			    display: flex;
+			    justify-content: flex-end;
+			    align-items: center;
+			    a{
+			    	position: relative;
+			    	    &:hover{
+					    	button{
+					    		background: $amarelo;
+					    		border-color: $amarelo;
+					    	}
+					    	.mais{
+					    		background: $azul;
+					    	}
+					    }	
+				    button{
+				    	background: $azul;
+				    	border: 1px solid $azul;
+						color: white;
+					    padding: 1vh 6vh 1vh 5vh;
+					    border-radius: 50px;
+					    transition: .5s;
+
+				    }	
+				    .mais{
+					    background: $vermelho;
+					    width: 8vh;
+					    height: 8vh;
+					    display: flex;
+					    justify-content: center;
+					    align-items: center;
+					    font-size: 30px;
+					    font-weight: 500;
+					    color: white;
+					    opacity: 1;
+					    border-radius: 50%;
+					    position: absolute;
+					    right: -20%;
+					    top: -23%;				    	
+				    }		    	
+			    }
+			}
+		}
+		.produtos{
+			margin-top: 4%;
+			.card-prod{
+				@extend .card-do-prod;
+			}
+		}
+	}
+}
+
+.card-do-prod{
+	border-radius: 15px;
+	overflow: hidden;
+	.img{
+		height: 40vh;
+		background-size: cover!important;
+		background-position: center!important;
+		border-radius: 0px 0px 15px 15px;
+		padding: 3%;
+		.categoria{
+			background: $amarelo;
+			padding: .5vh 3vh;
+			width: fit-content;
+			font-size: 14px;
+			font-weight: 800;
+			border-radius: 50px;
+		}
+	}
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	.infos{
+		padding: 6% 3%;
+		.nome-prod{
+			font-size: 25px;
+			margin-bottom: 2%;
+			text-align: center;
+			font-weight: 600;
+			color: $cinza;
+		}
+		.centro{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 2%;
+			.local{
+				background: $azul;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: .5vh 1.5vh;
+				border-radius: 50px;
+				p{
+					color: white;
+					font-size: 12px;
+					font-weight: 300;
+				}
+				.icon{
+					svg{
+						width: 70%;
+					}
+				}
+			}
+		}
+		.content{
+			display: flex;
+			justify-content: center;
+			.comandos{
+				width: 75%;
+				display: flex;
+				align-items: center;
+				.quarto{
+					width: 33.333%;
+					display: flex;
+					align-items: center;
+					.icon{
+						width: 2.5vh;
+						height: 2.5vh;
+						background: $azulClaro;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 4px;
+						margin-right: .5vh;
+						svg{
+							width: 70%;
+						}
+					}
+					p{
+						font-weight: 400;
+						font-size: 13px;
+					}
+				}
+			}			
+		}	
+		.botao{
+			display: flex;
+			margin-top: 6%;
+			justify-content: center;
+			.centro{
+				width: 55%;
+				button{
+					background: $vermelho;
+					border: 1px solid $vermelho;
+					color: white;
+					width: 100%;
+					height: 5vh;
+					border-radius: 50px;
+					transition: .5s;
+					span{
+						margin-right: 1vh;
+						font-weight: 14px;
+						font-weight: 500;
+
+					}
+					svg{
+						width: 10%;
+					}
+					&:hover{
+						background: $amarelo;
+						border-color: $amarelo;
+						span{
+							color: black;
+						}
+						svg{
+							filter: brightness(0);
+						}
+					}
+				}
+			}
+		}	
+	}
+}

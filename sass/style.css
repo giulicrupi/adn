@@ -1,0 +1,510 @@
+@charset "UTF-8";
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.menu {
+  background: white;
+  height: 14vh;
+}
+@media (min-width: 981px) {
+  .menu {
+    max-width: 1800px;
+    margin: auto;
+  }
+}
+.menu .container {
+  max-width: 95%;
+}
+.menu .container .navbar-brand {
+  width: 10%;
+  margin-right: 0;
+}
+.menu .container .collapse {
+  padding-left: 5%;
+  width: 40%;
+  position: relative;
+}
+.menu .container .collapse ul li a {
+  color: black;
+  font-weight: 500;
+  transition: 0.5s;
+  opacity: 1;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.menu .container .collapse ul li a:hover {
+  opacity: 0.7;
+}
+.menu .container .botoes {
+  width: 34%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.menu .container .botoes .cliente, .menu .container .botoes .whats {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  justify-content: center;
+  margin: 0 2vh;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.menu .container .botoes .whats {
+  margin-right: 0;
+}
+.menu .container .botoes .cliente {
+  border: 1px solid #0071CE;
+  border-radius: 50px;
+  padding: 0.5% 0%;
+  height: 5.5vh;
+}
+.menu .container .botoes .cliente p {
+  font-weight: 500;
+  color: #0071CE;
+  margin-left: 0.5vh;
+}
+.menu .container .botoes .cliente:hover {
+  background: #0071CE;
+}
+.menu .container .botoes .cliente:hover p {
+  color: white;
+}
+.menu .container .botoes .cliente:hover .icon {
+  filter: brightness(0) invert(1);
+}
+.menu .container .botoes .whats {
+  background: #22D143;
+  border: 1px solid #22D143;
+  border-radius: 50px;
+  padding: 0.5% 0%;
+  height: 5.5vh;
+}
+.menu .container .botoes .whats p {
+  font-weight: 500;
+  color: white;
+  margin-left: 0.5vh;
+}
+
+.banner-home {
+  position: relative;
+  position: relative;
+}
+@media (min-width: 981px) {
+  .banner-home {
+    max-width: 1800px;
+    margin: auto;
+  }
+}
+.banner-home .banner {
+  margin-top: 10vh;
+}
+.banner-home .banner .slide {
+  height: 90vh;
+}
+.banner-home .banner .slide .centro {
+  height: 100%;
+  background-size: cover !important;
+  background-position: bottom !important;
+}
+.banner-home .banner .slide .centro .overlay {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.39), transparent 70%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+}
+.banner-home .banner .slide .centro .overlay .container {
+  width: 100%;
+  color: white;
+  max-width: 79%;
+}
+.banner-home .banner .slide .centro .overlay .container .row {
+  width: 35%;
+}
+.banner-home .banner .slide .centro .overlay .container .row .local {
+  display: flex;
+  align-items: center;
+  background: #0071CE;
+  justify-content: center;
+  height: 4.5vh;
+  border-radius: 50px;
+}
+.banner-home .banner .slide .centro .overlay .container .row .local .icon {
+  margin-right: 1vh;
+}
+.banner-home .banner .slide .centro .overlay .container .row .local p {
+  font-size: 15px;
+}
+.banner-home .banner .slide .centro .overlay .container .row .categoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background: #FFD100;
+  text-align: center;
+  height: 4.5vh;
+  border-radius: 50px;
+  color: black;
+}
+.banner-home .banner .slide .centro .overlay .container .row .categoria p {
+  font-size: 15px;
+}
+.banner-home .banner .slide .centro .overlay .container .title {
+  font-size: 63px;
+  font-weight: 700;
+  margin: 1% 0;
+}
+.banner-home .banner .slide .centro .overlay .container .comandos {
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+.banner-home .banner .slide .centro .overlay .container .comandos .quarto {
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+}
+.banner-home .banner .slide .centro .overlay .container .comandos .quarto .icon {
+  width: 4vh;
+  height: 4vh;
+  background: #3CB4E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 1.5vh;
+}
+.banner-home .banner .slide .centro .overlay .container .comandos .quarto p {
+  font-weight: 400;
+  font-size: 21px;
+}
+.banner-home .banner .slide .centro .overlay .container .botao {
+  margin-top: 3%;
+}
+.banner-home .banner .slide .centro .overlay .container .botao button {
+  background: #D02C2F;
+  border: 1px solid #D02C2F;
+  color: white;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.banner-home .banner .slide .centro .overlay .container .botao button span {
+  margin-right: 3vh;
+}
+.banner-home .banner .slide .centro .overlay .container .botao button:hover {
+  background: white;
+  border-color: white;
+  color: black;
+}
+.banner-home .banner .slide .centro .overlay .container .botao button:hover svg {
+  filter: brightness(0);
+}
+.banner-home .slick-arrow {
+  background: #0071CE;
+  width: 8vh;
+  height: 8vh;
+  right: 4%;
+}
+.banner-home .slick-arrow img {
+  width: 50%;
+}
+.banner-home .slick-arrow.leftButton {
+  bottom: 51%;
+}
+.banner-home .slick-arrow.rightButton {
+  bottom: 40%;
+}
+.banner-home .slick-arrow.slick-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+
+input:focus, textarea:focus, button:focus, a:focus, select:focus {
+  outline: none;
+}
+
+.titulo, .sect2 .container .title, .sect1 .container .row .title {
+  font-size: 35px;
+  line-height: 120%;
+  font-weight: 600;
+  color: #2F2F2F;
+}
+.titulo span, .sect2 .container .title span, .sect1 .container .row .title span {
+  color: #0071CE;
+}
+
+.sect1 {
+  padding: 10vh 0;
+}
+@media (min-width: 981px) {
+  .sect1 {
+    max-width: 1800px;
+    margin: auto;
+  }
+}
+.sect1 .container {
+  max-width: 79%;
+}
+.sect1 .container .row {
+  align-items: center;
+}
+/* Container para o select customizado */
+.form-sec {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  margin-top: 3%;
+}
+.form-sec select {
+  appearance: none; /* Para navegadores modernos */
+  -webkit-appearance: none; /* Para navegadores baseados em WebKit */
+  -moz-appearance: none; /* Para Firefox */
+  background: none;
+  border: 1px solid #ccc;
+  padding: 2% 8%;
+  padding-right: 30px; /* Espaço para o ícone personalizado */
+  font-size: 16px;
+  width: 100%;
+  border-radius: 50px;
+  color: #0071CE;
+  font-weight: 600;
+  font-size: 18px;
+}
+.form-sec::after {
+  content: "▼"; /* Seta personalizada */
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #3CB4E5;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sect2 {
+  padding: 10vh 0;
+}
+.sect2 .container {
+  max-width: 79%;
+}
+.sect2 .container .linha {
+  display: flex;
+  align-items: center;
+}
+.sect2 .container .linha .title {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.sect2 .container .linha .title .filtro {
+  padding-left: 4%;
+  width: 27%;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+}
+.sect2 .container .linha .title .filtro select {
+  appearance: none; /* Para navegadores modernos */
+  -webkit-appearance: none; /* Para navegadores baseados em WebKit */
+  -moz-appearance: none; /* Para Firefox */
+  background: none;
+  border: 1px solid #ccc;
+  padding: 1% 8%;
+  padding-right: 30px; /* Espaço para o ícone personalizado */
+  font-size: 16px;
+  width: 100%;
+  border-radius: 50px;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+.sect2 .container .linha .title .filtro::after {
+  content: "▼"; /* Seta personalizada */
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: black;
+}
+.sect2 .container .linha .botao {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sect2 .container .linha .botao a {
+  position: relative;
+}
+.sect2 .container .linha .botao a:hover button {
+  background: #FFD100;
+  border-color: #FFD100;
+}
+.sect2 .container .linha .botao a:hover .mais {
+  background: #0071CE;
+}
+.sect2 .container .linha .botao a button {
+  background: #0071CE;
+  border: 1px solid #0071CE;
+  color: white;
+  padding: 1vh 6vh 1vh 5vh;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.sect2 .container .linha .botao a .mais {
+  background: #D02C2F;
+  width: 8vh;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  opacity: 1;
+  border-radius: 50%;
+  position: absolute;
+  right: -20%;
+  top: -23%;
+}
+.sect2 .container .produtos {
+  margin-top: 4%;
+}
+.card-do-prod, .sect2 .container .produtos .card-prod {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.card-do-prod .img, .sect2 .container .produtos .card-prod .img {
+  height: 40vh;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 0px 0px 15px 15px;
+  padding: 3%;
+}
+.card-do-prod .img .categoria, .sect2 .container .produtos .card-prod .img .categoria {
+  background: #FFD100;
+  padding: 0.5vh 3vh;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 50px;
+}
+.card-do-prod .infos, .sect2 .container .produtos .card-prod .infos {
+  padding: 6% 3%;
+}
+.card-do-prod .infos .nome-prod, .sect2 .container .produtos .card-prod .infos .nome-prod {
+  font-size: 25px;
+  margin-bottom: 2%;
+  text-align: center;
+  font-weight: 600;
+  color: #2F2F2F;
+}
+.card-do-prod .infos .centro, .sect2 .container .produtos .card-prod .infos .centro {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+.card-do-prod .infos .centro .local, .sect2 .container .produtos .card-prod .infos .centro .local {
+  background: #0071CE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vh 1.5vh;
+  border-radius: 50px;
+}
+.card-do-prod .infos .centro .local p, .sect2 .container .produtos .card-prod .infos .centro .local p {
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+}
+.card-do-prod .infos .centro .local .icon svg, .sect2 .container .produtos .card-prod .infos .centro .local .icon svg {
+  width: 70%;
+}
+.card-do-prod .infos .content, .sect2 .container .produtos .card-prod .infos .content {
+  display: flex;
+  justify-content: center;
+}
+.card-do-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.card-do-prod .infos .content .comandos .quarto, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto {
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+}
+.card-do-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon {
+  width: 2.5vh;
+  height: 2.5vh;
+  background: #3CB4E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 0.5vh;
+}
+.card-do-prod .infos .content .comandos .quarto .icon svg, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon svg {
+  width: 70%;
+}
+.card-do-prod .infos .content .comandos .quarto p, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto p {
+  font-weight: 400;
+  font-size: 13px;
+}
+.card-do-prod .infos .botao, .sect2 .container .produtos .card-prod .infos .botao {
+  display: flex;
+  margin-top: 6%;
+  justify-content: center;
+}
+.card-do-prod .infos .botao .centro, .sect2 .container .produtos .card-prod .infos .botao .centro {
+  width: 55%;
+}
+.card-do-prod .infos .botao .centro button, .sect2 .container .produtos .card-prod .infos .botao .centro button {
+  background: #D02C2F;
+  border: 1px solid #D02C2F;
+  color: white;
+  width: 100%;
+  height: 5vh;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.card-do-prod .infos .botao .centro button span, .sect2 .container .produtos .card-prod .infos .botao .centro button span {
+  margin-right: 1vh;
+  font-weight: 14px;
+  font-weight: 500;
+}
+.card-do-prod .infos .botao .centro button svg, .sect2 .container .produtos .card-prod .infos .botao .centro button svg {
+  width: 10%;
+}
+.card-do-prod .infos .botao .centro button:hover, .sect2 .container .produtos .card-prod .infos .botao .centro button:hover {
+  background: #FFD100;
+  border-color: #FFD100;
+}
+.card-do-prod .infos .botao .centro button:hover span, .sect2 .container .produtos .card-prod .infos .botao .centro button:hover span {
+  color: black;
+}
+.card-do-prod .infos .botao .centro button:hover svg, .sect2 .container .produtos .card-prod .infos .botao .centro button:hover svg {
+  filter: brightness(0);
+}
+
+/*# sourceMappingURL=style.css.map */
