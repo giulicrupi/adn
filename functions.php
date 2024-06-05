@@ -28,7 +28,7 @@ function pd_produtos_scripts(){
 wp_enqueue_style('730-style-sass', get_template_directory_uri() . '/sass/style.css', array(), filemtime(get_template_directory() . '/sass/style.css'), false);
 
 
- 	wp_enqueue_script( 'flickity-js','https://flickity.metafizzy.co/flickity.pkgd.min.js');
+ 	wp_enqueue_script( 'font-js','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js');
  	
  	wp_enqueue_style( 'slick-css','http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
  	// wp_enqueue_style( 'pointer-css','/wp-content/themes/Arqosv2/sass/pointer.css');
@@ -40,7 +40,13 @@ wp_enqueue_style('730-style-sass', get_template_directory_uri() . '/sass/style.c
  	// Google Fonts
  	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000');
  	
+    // Enfileira o script customizado
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom-script.js', array('jquery'), null, true );
 
+    // Localiza os parâmetros do AJAX
+    wp_localize_script('custom-script', 'ajax_params', array(
+        'ajax_url' => admin_url('admin-ajax.php')
+    ));
 
 }
 add_action( 'wp_enqueue_scripts', 'pd_produtos_scripts' );
@@ -188,3 +194,224 @@ function tr_create_my_taxonom3() {
 add_action( 'init', 'tr_create_my_taxonom3' );
 
 
+
+
+function render_produtos_local_filter() {
+    $terms = get_terms(array(
+        'taxonomy' => 'produtos-bairro',
+        'hide_empty' => false,
+    ));
+
+    if (is_wp_error($terms)) {
+        echo 'Erro ao obter termos: ' . $terms->get_error_message();
+        return;
+    }
+
+    if (!empty($terms)) {
+        $archive_link = get_post_type_archive_link('produtos');
+        ?>
+        <form action="<?php echo esc_url($archive_link); ?>" method="get" id="produtos-local-form">
+            <select name="produtos-local-filter" id="produtos-local-filter">
+                <option value="">Selecione a cidade..</option>
+                <?php foreach ($terms as $term) : ?>
+                    <?php
+                    $posts_with_term = get_posts(array(
+                        'post_type' => 'produtos',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'produtos-bairro',
+                                'field' => 'slug',
+                                'terms' => $term->slug,
+                            ),
+                        ),
+                    ));
+
+                    if (!empty($posts_with_term)) {
+                        ?>
+                        <option value="<?php echo esc_attr($term->slug); ?>"><?php echo esc_html($term->name); ?></option>
+                        <?php
+                    }
+                    ?>
+                <?php endforeach; ?>
+            </select>
+        </form>
+        <?php
+    }
+}
+
+// Função para carregar resultados de filtragem por AJAX
+add_action('wp_ajax_buscar_resultados', 'buscar_resultados_callback');
+add_action('wp_ajax_nopriv_buscar_resultados', 'buscar_resultados_callback');
+
+
+
+function buscar_resultados_callback() {
+    $cidade_slug = sanitize_text_field($_GET['cidade']);
+    $cidade_term = get_term_by('slug', $cidade_slug, 'produtos-bairro');
+
+    ob_start();
+
+    if ($cidade_term) {
+        
+
+        $args = array(
+            'post_type' => 'produtos',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'produtos-bairro',
+                    'field' => 'slug',
+                    'terms' => $cidade_slug,
+                ),
+            ),
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                echo '<div class="col-lg-4">';?>
+                          <a href="<?php the_permalink(); ?>">
+                           <?php get_template_part( 'templates-part/cardProd' ); ?>    
+                           </a>
+              <?php  echo '</div>';
+            }
+
+            wp_reset_postdata();
+        } else {
+            echo '<p>Nenhum produto encontrado nessa cidade.</p>';
+        }
+    }
+
+    $content = ob_get_clean();
+    echo $content;
+
+    wp_die();
+}
+
+
+
+function dynamic_taxonomy_values( $tag, $unused ) {
+    if ( $tag['name'] != 'cidade' ) {
+        return $tag;
+    }
+
+    $args = array(
+        'taxonomy'     => 'produtos-bairro',
+        'orderby'      => 'name',
+        'order'        => 'ASC',
+        'hide_empty'   => true,
+    );
+
+    $terms = get_terms( $args );
+
+    if ( ! $terms ) {
+        return $tag;
+    }
+
+    foreach ( $terms as $term ) {
+        // Get the value of 'id empreendimento fake' using Advanced Custom Fields
+        $id_empreendimento_fake = get_field( 'id_empreendimento_fake', 'produtos-bairro_' . $term->term_id );
+
+        $tag['raw_values'][] = $id_empreendimento_fake;
+        $tag['values'][] = $id_empreendimento_fake;
+        $tag['labels'][] = $term->name;
+    }
+
+    return $tag;
+}
+
+add_filter( 'wpcf7_form_tag', 'dynamic_taxonomy_values', 10, 2 );
+
+
+function calculate_reading_time() {
+  // Obtém o conteúdo do post
+  $content = get_the_content();
+
+  // Remove tags HTML para calcular apenas o texto
+  $text = wp_strip_all_tags($content);
+
+  // Define a velocidade média de leitura em palavras por minuto
+  $words_per_minute = 200;
+
+  // Calcula o tempo estimado de leitura em minutos
+  $reading_time = ceil(str_word_count($text) / $words_per_minute);
+
+  // Retorna o tempo estimado de leitura
+  if ($reading_time <= 1) {
+    return $reading_time . ' min';
+  } else {
+    return $reading_time . ' min';
+  }
+}
+
+
+function load_contact_form() {
+    if (isset($_POST['topic'])) {
+        $topic = sanitize_text_field($_POST['topic']);
+        
+        switch ($topic) {
+            case 'comprar':
+                echo do_shortcode('[contact-form-7 id="b40f49d" title="Contato"]');
+                break;
+            case 'relacionamento':
+                echo do_shortcode('[contact-form-7 id="a2036f0" title="Relacionamento com o cliente"]');
+                break;
+            case 'terreno':
+                echo do_shortcode('[contact-form-7 id="ca5ae4d" title="Venda seu terreno"]');
+                break;
+            default:
+                echo 'Opção inválida';
+        }
+    }
+    wp_die();
+}
+add_action('wp_ajax_load_contact_form', 'load_contact_form');
+add_action('wp_ajax_nopriv_load_contact_form', 'load_contact_form');
+
+
+add_action( 'wpcf7_init', 'custom_add_form_tag_customlist' );
+
+function custom_add_form_tag_customlist() {
+    wpcf7_add_form_tag( array( 'customlist', 'customlist*' ), 
+'custom_customlist_form_tag_handler', true );
+}
+
+
+function custom_customlist_form_tag_handler( $tag ) {
+
+    $tag = new WPCF7_FormTag( $tag );
+
+    if ( empty( $tag->name ) ) {
+        return '';
+    }
+
+    $customlist = '';
+
+    $query = new WP_Query(array(
+        'post_type' => 'produtos',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'orderby'       => 'title',
+        'order'         => 'ASC',
+    ));
+
+    while ($query->have_posts()) {
+        $query->the_post();
+        $post_title = get_the_title();
+        $customlist .= sprintf( '<option value="%1$s">%2$s</option>', 
+esc_html( $post_title ), esc_html( $post_title ) );
+    }
+
+    wp_reset_query();
+
+    $customlist = sprintf(
+        '<select name="%1$s" id="%2$s"><option value="">Empreendimento de interesse</option>   %3$s </select> ', $tag->name,
+    $tag->name . '-options',
+        $customlist );
+
+    return $customlist;
+}
+
+//use this tag in your form
+//[customlist your-field-name]

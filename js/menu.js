@@ -10,9 +10,9 @@
     if (window.matchMedia("(min-width:400px)").matches) {
     $(document).ready(function(){
       $(window).scroll(function() { // check if scroll event happened
-        if ($(document).scrollTop() > 390 ) { // check if user scrolled more than 50 from top of the browser 
+        if ($(document).scrollTop() > 90 ) { // check if user scrolled more than 50 from top of the browser 
           // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-$(".logo-nav").addClass("mudar-logo");
+          $(".menu").addClass("change");
 
 
 
@@ -23,7 +23,7 @@ $(".logo-nav").addClass("mudar-logo");
         } else {
 
 
-$(".logo-nav").removeClass("mudar-logo");
+          $(".menu").removeClass("change");
 
 
 

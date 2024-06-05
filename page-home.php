@@ -144,7 +144,7 @@
 				<div class="title">
 					<p >Empreedimentos <span>ADN</span></p>
 					<div class="filtro">
-					    <form action="<?php echo esc_url(home_url('/')); ?>" method="get" id="filter-form">
+				<!-- 	    <form action="<?php echo esc_url(home_url('/')); ?>" method="get" id="filter-form">
 					        <select name="produtos-bairro" id="bairro" onchange="this.form.submit()">
 					            <option >Selecione a cidade...</option>
 					            <?php
@@ -157,7 +157,8 @@
 					            }
 					            ?>
 					        </select>
-					    </form>
+					    </form> -->
+					    <?php echo render_produtos_local_filter(); ?>
 					</div>
 				
 				</div>
@@ -168,7 +169,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="produtos row">
+			<div class="produtos row" id="produtos-padrao">
 					<?php		                
 					$listagem_home = new WP_Query(array(
 						'post_type' => 'produtos',
@@ -182,7 +183,7 @@
 						?> 
 
 						<div class="col-lg-4">
-							<a href="#">
+							<a href="<?php the_permalink(); ?>">
 								<?php get_template_part( 'templates-part/cardProd' ); ?>
 							</a>
 						</div>
@@ -191,12 +192,256 @@
 				<?php wp_reset_postdata(); ?>	
 				<?php endif; ?>				
 			</div>
+			<div class="resultado-filtros row produtos" id="resultado-filtros"></div>
 		</div>
 	</section>
+	<section class="sect3">
+		<img src="<?php echo get_template_directory_uri(); ?>/svg/forma-azul.svg" alt="" class="img-fluid forma1">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					<img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Rectangle-7-1.png" alt="" class="img-fluid">
+				</div>
+				<div class="col-lg-7">
+					<div class="form">
+						<p class="title">
+							Fale agora mesmo <br>
+							com um <span>corretor</span>							
+						</p>				
+						<?php echo do_shortcode('[contact-form-7 id="07df5c8" title="Formulário Home Page"]'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img src="<?php echo get_template_directory_uri(); ?>/svg/forma-amarela.svg" alt="" class="img-fluid forma2">
+	</section>
+	<section class="sect4">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="content">
+						<div class="centro">
+						<div class="row r1">
+							<div class="col-lg-5">
+								<p class="title">
+									Por que escolher <br>
+									um imóvel <b>ADN?</b>							
+								</p>								
+							</div>
+							<div class="col-lg-7">
+								<p class="texto-menor">Provocar sorrisos, emoções e alegrias é o motor que nos leva cada vez mais longe. Realizar sonhos é o nosso principal combustível.</p>
+							</div>
+						</div>			
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="conteudo claro">
+									<div class="icon">
+										<img src="<?php echo get_template_directory_uri(); ?>/svg/chave.svg" alt="" class="img-fluid">
+									</div>
+									<p class="texto">
+										Proporcionamos bem-estar e qualidade de
+										vida com a
+										melhor relação 
+										custo-benefício.										
+									</p>				
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="conteudo vermelho">
+									<div class="icon">
+										<img src="<?php echo get_template_directory_uri(); ?>/svg/lista.svg" alt="" class="img-fluid">
+									</div>
+									<p class="texto">
+										Possuimos diferenciais de inovação e modernidade.										
+									</p>				
+								</div>
+							</div>	
+							<div class="col-lg-4">
+								<div class="conteudo amarelo">
+									<div class="icon">
+										<img src="<?php echo get_template_directory_uri(); ?>/svg/people.svg" alt="" class="img-fluid">
+									</div>
+									<p class="texto">
+										Possuimos diferenciais de inovação e modernidade.										
+									</p>				
+								</div>
+							</div>														
+						</div>							
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 p-0">
+					<div class="img" style="background: url(<?php echo site_url(); ?>/wp-content/uploads/2024/06/pq-escolher.jpg);">.</div>
+				</div>
+			</div>
+		</div>
+	</section>			
+	<section class="sect5">
+		<div class="cont container"></div>
+		<div class="container fluido">
+			<p class="title">Veja os depoimentos de <br> quem já comprou:</p>
+			<?php if( have_rows('comentarios') ): ?>
+			    <div class="comentarios">
+			    <?php while( have_rows('comentarios') ): the_row(); 
+			        $image = get_sub_field('imagem_do_cliente');
+			        ?>
+			        <div class="item">
+			        	<div class="depoimento">	
+			        		<div class="head-dep">	
+				        		<div class="stars">	<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+				        		<div class="nota">	
+				        			<p>5/5</p>
+				        		</div>	
+			        		</div>
+			        		<div class="comentario">
+			        			<p>	<?php  the_sub_field('comentario');	 ?></p>	
+			        		</div>	
+			        		<div class="footer-dep">	
+			        			<div class="img">
+			        				<div class="center" style="background: url(<?php echo $image['url'];  ?>);">	
+			        					
+			        				</div>	
+			        			</div>
+			        			<div class="desc">	
+			        				<p class="nome-cliente"><?php the_sub_field('nome_do_cliente'); ?></p>
+
+			        				<p class="cargo"><?php the_sub_field('cargo'); ?></p>	
+			        			</div>	
+			        		</div>							
+			        	</div>
+			        </div>
+			    <?php endwhile; ?>
+			    </div>
+			<?php endif; ?>
+					<button id="prevComentarios" class="leftButton"><i class="fa-solid fa-chevron-left"></i></button>	
+					<button id="nextComentarios" class="rightButton"><i class="fa-solid fa-chevron-right"></i></button>			
+		</div>
+	</section>				
+	<section class="sect6">
+		<div class="container">
+			<div class="linha">
+				<div class="title">
+					<p >Confira nosso <span>Blog</span></p>
+
+				</div>
+				<div class="botao">
+					<a href="#">
+						<button>Ver todos</button>
+						<span class="mais">+</span>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+	     <?php
+	          $cont = 0;
+	          $args = array(
+	              'post_type' => 'post',
+	              'posts_per_page' => 3, // Exibir 10 posts na primeira carga
+	              'orderby' => 'date',
+	              'order' => 'DESC',
+	              // 'offset' => 3,
+	          );
+
+	          $loop = new WP_Query($args);
+
+	          if ($loop->have_posts()) :
+	              while ($loop->have_posts()) : $loop->the_post();
+	                  ?>                
+	                  <div class="col-lg-4 col-12">	
+	                  	<a href="<?php the_permalink(); ?>">
+	                  	<div class="card-blog">
+							<?php
+							// Obtém o conteúdo do post
+							$content = get_the_content();
+
+							// Remove as tags HTML
+							$content = wp_strip_all_tags($content);
+
+							// Limita o texto a 200 caracteres
+							$excerpt = mb_substr($content, 0, 180);
+						
+							?>
+
+		                  <div class="img" style="background: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+		                    <div class="linha">
+		                      <?php
+		                        $categories = get_the_category();
+		                        if ($categories) {
+		                                
+		                          if (!empty($categories)) {
+		                              $category = reset($categories);
+		                              echo '<div class="categoria"><p>' . $category->name . '</p></div>';
+		                          }
+		                          
+		                        }
+		                        ?>                       
+		                      
+		                        
+		                    </div>	                    
+		                  </div>
+		                  <div class="desc">
+		                  	<div class="line">
+		                  		<div class="data">
+		                  			<div class="quadrado"></div>
+		                  			<p class="p"><?php echo get_the_date(); ?></p>
+		                  		</div>
+		                  		<div class="leitura">
+		                  			<div class="quadrado"></div>
+		                  			<p class="p"><?php echo calculate_reading_time(); ?></p>
+		                  		</div>
+		                  	</div>				
+		                    <p class="title-blog"><?php the_title(); ?></p>
+						    <p class="texto-blog"><?php 	echo $excerpt; ?>...</p>                 
+                    
+		                  </div>	                  
+	                  	</div>	                  		
+	                  	</a>
+	                  </div>	
+	                  <?php
+	              endwhile;
+	              wp_reset_postdata();
+	          endif;
+	          ?>   				
+			</div>			
+		</div>
+	</section>				
+
+<script>
+	  jQuery(document).ready(function($) {
+      const produtosLocalFilter = $('#produtos-local-filter');
+      const resultadoFiltros = $('#resultado-filtros');
+      const produtosDefault = $('#produtos-padrao'); 
+
+      produtosLocalFilter.on('change', function() {
+          const cidadeSlug = produtosLocalFilter.val();
+          if (cidadeSlug !== '') {
+              $.ajax({
+                  url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                  method: 'GET',
+                  data: {
+                      action: 'buscar_resultados',
+                      cidade: cidadeSlug
+                  },
+                  success: function(response) {
+                      resultadoFiltros.html(response);
+                      produtosDefault.hide();
+                      // nextSlick.hide();
+                      // prevSlick.hide();
+                  }
+              });
+          } else {
+              resultadoFiltros.empty();
+              produtosDefault.show();
+              // nextSlick.show();
+              // prevSlick.show();            
+          }
+      });
+  });
+
+</script>
+
+
 <?php get_footer(); ?>
-
-
-
 
 
 
