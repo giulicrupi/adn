@@ -93,6 +93,14 @@
  
 
 
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  $('.slider-galeria').slick('setPosition');
+  $('.slider-galeria-thumbs').slick('setPosition');
+  $('.slider-planta').slick('setPosition');
+  $('.slider-planta-thumbs').slick('setPosition');  
+  $('.slider-implantacao').slick('setPosition');
+  $('.slider-implantacao-thumbs').slick('setPosition');    
+});
 
 
 

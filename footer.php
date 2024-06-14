@@ -1,16 +1,14 @@
 <section class="news">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-5">
-        <p class="title">
-          Assine nossa <br>
-          <b>newsletter</b>
-        </p>
-      </div>
-      <div class="col-lg-7">
+
+      <p class="title">
+        Fique por dentro das novidades da <br>
+        <b>ADN Construtora</b>
+      </p>      
+
         <?php echo do_shortcode('[contact-form-7 id="f759c3e" title="Newsletter"]'); ?>
-      </div>
-    </div>
+
+
   </div>
 </section>    
 <section class="siga">
@@ -228,6 +226,89 @@
             }
           ]});
 
+          $(".galeria-fachadas").slick({
+        centerMode: false,
+        slidesToShow: 1 ,
+        arrows: true,
+        infinite: false,
+        dots: true,
+        
+          prevArrow: '#prevFachada',
+          nextArrow: '#nextFachada',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+              
+              }
+            }
+          ]});
+  $(document).ready(function(){
+      $('.slider-galeria').slick({
+        centerMode: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+        asNavFor: '.slider-galeria-thumbs',
+          prevArrow: '#prevGaleria',
+          nextArrow: '#nextGaleria',           
+      });
+      $('.slider-galeria-thumbs').slick({
+        centerMode: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.slider-galeria',
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
+        infinite: false,
+        dots: true,
+        appendDots: $('#customDots'),
+
+
+            responsive: [{
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                   vertical: false,
+                   verticalSwiping: false,
+                }
+            }]        
+      });
+  });      
+  $(document).ready(function(){
+      $('.slider-planta').slick({
+        centerMode: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+
+          prevArrow: '#prevPlanta',
+          nextArrow: '#nextPlanta',   
+          dots: true,
+        appendDots: $('#customDotsPlanta'),        
+      });
+
+  });  
+  $(document).ready(function(){
+      $('.slider-implantacao').slick({
+        centerMode: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+          prevArrow: '#prevImplantacao',
+          nextArrow: '#nextImplantacao',  
+          dots: false,
+        appendDots: $('#customDotsImplantacao'),               
+      });
+
+  });    
     </script>
 
 

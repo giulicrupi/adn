@@ -37,6 +37,8 @@ wp_enqueue_style('730-style-sass', get_template_directory_uri() . '/sass/style.c
  	
 
 
+
+
  	// Google Fonts
  	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000');
  	
@@ -47,6 +49,13 @@ wp_enqueue_style('730-style-sass', get_template_directory_uri() . '/sass/style.c
     wp_localize_script('custom-script', 'ajax_params', array(
         'ajax_url' => admin_url('admin-ajax.php')
     ));
+    wp_add_inline_script('fancybox-script', 'jQuery(document).ready(function($) { $(".fancybox").fancybox({
+        thumbs : {
+            autoStart : true,
+            axis      : "x"
+        }
+    }); });');
+
 
 }
 add_action( 'wp_enqueue_scripts', 'pd_produtos_scripts' );
@@ -415,3 +424,29 @@ esc_html( $post_title ), esc_html( $post_title ) );
 
 //use this tag in your form
 //[customlist your-field-name]
+
+
+
+function add_svg_to_upload_mimes($upload_mimes) {
+    $upload_mimes['svg'] = 'image/svg+xml';
+    return $upload_mimes;
+}
+add_filter('upload_mimes', 'add_svg_to_upload_mimes');
+
+
+function fix_svg() {
+    echo '<style type="text/css">
+          .attachment-266x266, .thumbnail img {
+               width: 100% !important;
+               height: auto !important;
+          }
+          </style>';
+}
+add_action('admin_head', 'fix_svg');
+
+
+function add_webp_upload_mimes($upload_mimes) {
+    $upload_mimes['webp'] = 'image/webp';
+    return $upload_mimes;
+}
+add_filter('upload_mimes', 'add_webp_upload_mimes');

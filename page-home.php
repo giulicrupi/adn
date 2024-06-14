@@ -115,8 +115,8 @@
 			<?php endif; ?>
 					
 		</div>	
-		<button id="prevBanner" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>	
-		<button id="nextBanner" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>	
+		<button id="prevBanner" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>	
+		<button id="nextBanner" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>	
 	</section>				
 	<section class="sect1">
 		<div class="container">
