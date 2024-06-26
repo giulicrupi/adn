@@ -184,7 +184,21 @@
 
     </div>
   </div>
-</footer>                             
+</footer>      
+<div class="whatsapp-fixo">
+  <div class="circle" data-bs-toggle="modal" data-bs-target="#whatsappModal">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+      <g clip-path="url(#clip0_246_76)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M37.7318 33.7215C37.1633 35.3308 34.9033 36.6622 33.1011 37.0515C31.8673 37.3134 30.2585 37.5207 24.8376 35.2742C18.7491 32.7517 10.2945 23.7664 10.2945 17.787C10.2945 14.743 12.0496 11.1984 15.1186 11.1984C16.5953 11.1984 16.9209 11.2272 17.4068 12.3929C17.9753 13.7662 19.3624 17.1498 19.5275 17.4967C20.2093 18.9196 18.834 19.7525 17.8361 20.9914C17.5177 21.3642 17.1568 21.7674 17.5602 22.4611C17.9612 23.1407 19.3482 25.4013 21.3864 27.2159C24.019 29.5615 26.1539 30.3103 26.9182 30.6288C27.4867 30.8648 28.1661 30.8099 28.5813 30.3662C29.1073 29.7976 29.7608 28.854 30.426 27.9243C30.8954 27.2589 31.4923 27.1758 32.1174 27.4118C32.5397 27.5581 37.9063 30.0504 38.1328 30.4492C38.3002 30.7394 38.3003 32.1122 37.7318 33.7215ZM24.0049 0.410248H23.9931C10.988 0.410248 0.4104 10.9911 0.4104 24C0.4104 29.1583 2.07349 33.9439 4.9019 37.8256L1.96262 46.5911L11.0282 43.6942C14.7577 46.1624 19.2091 47.5897 24.0049 47.5897C37.0099 47.5897 47.5899 37.0089 47.5899 24C47.5899 10.9911 37.0099 0.410248 24.0049 0.410248Z" fill="white"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_246_76">
+          <rect width="47.1795" height="47.1795" fill="white" transform="translate(0.4104 0.410248)"/>
+        </clipPath>
+      </defs>
+    </svg>    
+  </div>
+</div>                               
       <script>
 
 
@@ -225,6 +239,32 @@
               }
             }
           ]});
+
+
+          $(".produtos").slick({
+        centerMode: false,
+        slidesToShow: 3 ,
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevProdutos',
+          nextArrow: '#nextProdutos',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+               centerPadding: '120px',
+               centerMode: true,
+              
+              }
+            }
+          ]});
+
+
+
+
 
           $(".galeria-fachadas").slick({
         centerMode: false,
@@ -350,6 +390,27 @@
             }
           ]});
 
+          $(".motivos").slick({
+        centerMode: false,
+        slidesToShow: 2 ,
+       
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevMotivos',
+          nextArrow: '#nextMotivos',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+              centerPadding: '130px',
+               centerMode: true,
+              
+              }
+            }
+          ]});
 
     </script>
 

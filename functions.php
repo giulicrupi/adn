@@ -277,15 +277,18 @@ function buscar_resultados_callback() {
         $query = new WP_Query($args);
 
         if ($query->have_posts()) {
+            echo  '     <button id="prevProdutos2" class="leftButton"><img src=" '.  get_template_directory_uri() . '/svg/left.svg" alt="" class="img-fluid"></button>   
+        <button id="nextProdutos2" class="rightButton"><img src="'.  get_template_directory_uri() . '/svg/right.svg" alt="" class="img-fluid"></button> ';
+            echo '<div class="produtos2">';
             while ($query->have_posts()) {
                 $query->the_post();
-                echo '<div class="col-lg-4">';?>
+                echo '<div class="item">';?>
                           <a href="<?php the_permalink(); ?>">
                            <?php get_template_part( 'templates-part/cardProd' ); ?>    
                            </a>
               <?php  echo '</div>';
             }
-
+            echo '</div>';
             wp_reset_postdata();
         } else {
             echo '<p>Nenhum produto encontrado nessa cidade.</p>';

@@ -65,7 +65,7 @@
       <p>Área do cliente</p>        
       </a>
     </div>	
-    <div class="whats" id="desk">
+    <div class="whats" id="desk" data-bs-toggle="modal" data-bs-target="#whatsappModal">
     	<div class="icon">
 			<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
 				<g clip-path="url(#clip0_208_76)">
@@ -89,3 +89,19 @@
     </div>  				
   </div>
 </nav>
+
+
+<div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="whatsappModalLabel">Fale conosco pelo WhatsApp</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <?php echo do_shortcode('[contact-form-7 id="795d5c8" title="WhatsApp"]'); ?>
+      </div>
+
+    </div>
+  </div>
+</div>

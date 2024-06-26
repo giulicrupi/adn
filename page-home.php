@@ -18,8 +18,10 @@
 							<div class="centro" style="background: url(<?php echo $imagemBanner['url']; ?>);">
 								<div class="overlay">
 									<div class="container">
-										<div class="row">
-											<div class="col-lg-6">
+		
+										<div class="conts">
+																					<div class="row">
+											<div class="col-lg-6 col-6 padding">
 												<div class="local">
 													<div class="icon">
 														<svg xmlns="http://www.w3.org/2000/svg" width="17" height="22" viewBox="0 0 17 22" fill="none">
@@ -40,7 +42,7 @@
 													</p>														
 												</div>
 											</div>
-											<div class="col-lg-6">
+											<div class="col-lg-6 col-6 padding">
 												<div class="categoria">
 													<p>
 								                        <?php 
@@ -57,6 +59,7 @@
 												</div>
 											</div>
 										</div>	
+										</div>
 										<p class="title"><?php the_title(); ?></p>
 										<div class="comandos">
 											<div class="quarto">
@@ -163,46 +166,52 @@
 				
 				</div>
 				<div class="botao">
-					<a href="#">
+					<a href="<?php echo site_url(); ?>/produtos">
 						<button>Ver todos</button>
 						<span class="mais">+</span>
 					</a>
 				</div>
 			</div>
-			<div class="produtos row" id="produtos-padrao">
-					<?php		                
-					$listagem_home = new WP_Query(array(
-						'post_type' => 'produtos',
-						'posts_per_page' => 3
-					));
-					              
-					if ($listagem_home->have_posts()) : 
-						?>
-						<?php while ($listagem_home->have_posts()) : $listagem_home->the_post();
-	  						
-						?> 
+			<div id="produtos-padrao">
+				<div class="produtos " >
+						<?php		                
+						$listagem_home = new WP_Query(array(
+							'post_type' => 'produtos',
+							'posts_per_page' => 3
+						));
+						              
+						if ($listagem_home->have_posts()) : 
+							?>
+							<?php while ($listagem_home->have_posts()) : $listagem_home->the_post();
+		  						
+							?> 
 
-						<div class="col-lg-4">
-							<a href="<?php the_permalink(); ?>">
-								<?php get_template_part( 'templates-part/cardProd' ); ?>
-							</a>
-						</div>
-						
-					<?php endwhile; ?>		
-				<?php wp_reset_postdata(); ?>	
-				<?php endif; ?>				
+							<div class="item">
+								<a href="<?php the_permalink(); ?>">
+									<?php get_template_part( 'templates-part/cardProd' ); ?>
+								</a>
+							</div>
+							
+						<?php endwhile; ?>		
+					<?php wp_reset_postdata(); ?>	
+					<?php endif; ?>				
+				</div>
+				<button id="prevProdutos" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>	
+				<button id="nextProdutos" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>								
 			</div>
-			<div class="resultado-filtros row produtos" id="resultado-filtros"></div>
+
+			<div class="resultado-filtros  " id="resultado-filtros"></div>
 		</div>
 	</section>
 	<section class="sect3">
 		<img src="<?php echo get_template_directory_uri(); ?>/svg/forma-azul.svg" alt="" class="img-fluid forma1">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5">
-					<img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Rectangle-7-1.png" alt="" class="img-fluid">
+				<div class="col-lg-5 col-4 order-lg-1 order-2 p-r">
+					<img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Rectangle-7-1.png" alt="" class="img-fluid" id="desk">
+					<img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Rectangle-7-2.png" alt="" class="img-fluid" id="mob">
 				</div>
-				<div class="col-lg-7">
+				<div class="col-lg-7 col-8 order-lg-2 order-1 p-l">
 					<div class="form">
 						<p class="title">
 							Fale agora mesmo <br>
@@ -218,7 +227,7 @@
 	<section class="sect4">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7">
+				<div class="col-lg-7 p-7 col-12">
 					<div class="content">
 						<div class="centro">
 						<div class="row r1">
@@ -232,7 +241,7 @@
 								<p class="texto-menor">Provocar sorrisos, emoções e alegrias é o motor que nos leva cada vez mais longe. Realizar sonhos é o nosso principal combustível.</p>
 							</div>
 						</div>			
-						<div class="row">
+						<div class="row" id="desk">
 							<div class="col-lg-4">
 								<div class="conteudo claro">
 									<div class="icon">
@@ -266,8 +275,47 @@
 									</p>				
 								</div>
 							</div>														
-						</div>							
 						</div>
+						<div class="motivos" id="mob">
+							<div class="item">
+								<div class="conteudo claro">
+									<div class="icon">
+										<img src="<?php echo get_template_directory_uri(); ?>/svg/chave.svg" alt="" class="img-fluid">
+									</div>
+									<p class="texto">
+										Proporcionamos bem-estar e qualidade de
+										vida com a
+										melhor relação 
+										custo-benefício.										
+									</p>				
+								</div>
+							</div>
+							<div class="item">
+								<div class="conteudo vermelho">
+									<div class="icon">
+										<img src="<?php echo get_template_directory_uri(); ?>/svg/lista.svg" alt="" class="img-fluid">
+									</div>
+									<p class="texto">
+										Possuimos diferenciais de inovação e modernidade.										
+									</p>				
+								</div>
+							</div>	
+							<div class="item">
+								<div class="conteudo amarelo">
+									<div class="icon">
+										<img src="<?php echo get_template_directory_uri(); ?>/svg/people.svg" alt="" class="img-fluid">
+									</div>
+									<p class="texto">
+										Possuimos diferenciais de inovação e modernidade.										
+									</p>				
+								</div>
+							</div>														
+						</div>													
+						</div>
+						<div id="mob">	
+							<button id="prevMotivos" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>	
+							<button id="nextMotivos" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>								
+						</div>	
 					</div>
 				</div>
 				<div class="col-lg-5 p-0">
@@ -320,36 +368,61 @@
 		<?php 	get_template_part( 'templates-part/sect-blog' ) ?>			
 
 <script>
-	  jQuery(document).ready(function($) {
-      const produtosLocalFilter = $('#produtos-local-filter');
-      const resultadoFiltros = $('#resultado-filtros');
-      const produtosDefault = $('#produtos-padrao'); 
+jQuery(document).ready(function($) {
+    const produtosLocalFilter = $('#produtos-local-filter');
+    const resultadoFiltros = $('#resultado-filtros');
+    const produtosDefault = $('#produtos-padrao'); 
 
-      produtosLocalFilter.on('change', function() {
-          const cidadeSlug = produtosLocalFilter.val();
-          if (cidadeSlug !== '') {
-              $.ajax({
-                  url: '<?php echo admin_url('admin-ajax.php'); ?>',
-                  method: 'GET',
-                  data: {
-                      action: 'buscar_resultados',
-                      cidade: cidadeSlug
-                  },
-                  success: function(response) {
-                      resultadoFiltros.html(response);
-                      produtosDefault.hide();
-                      // nextSlick.hide();
-                      // prevSlick.hide();
-                  }
-              });
-          } else {
-              resultadoFiltros.empty();
-              produtosDefault.show();
-              // nextSlick.show();
-              // prevSlick.show();            
-          }
-      });
-  });
+    // Função para inicializar o Slick.js
+    function initializeSlick() {
+          $(".produtos2").slick({
+        centerMode: false,
+        slidesToShow: 3 ,
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevProdutos2',
+          nextArrow: '#nextProdutos2',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+               centerPadding: '120px',
+               centerMode: true,
+              
+              }
+            }
+          ]});
+    }
+
+    produtosLocalFilter.on('change', function() {
+        const cidadeSlug = produtosLocalFilter.val();
+        if (cidadeSlug !== '') {
+            $.ajax({
+                url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                method: 'GET',
+                data: {
+                    action: 'buscar_resultados',
+                    cidade: cidadeSlug
+                },
+                success: function(response) {
+                    resultadoFiltros.html(response);
+                    produtosDefault.hide();
+                    // Re-inicializa o Slick.js após o carregamento do conteúdo via AJAX
+                    initializeSlick();
+                }
+            });
+        } else {
+            resultadoFiltros.empty();
+            produtosDefault.show();
+        }
+    });
+
+    // Inicializa o Slick.js na carga inicial da página
+    initializeSlick();
+});
 
 </script>
 
