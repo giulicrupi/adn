@@ -308,7 +308,49 @@
         appendDots: $('#customDotsImplantacao'),               
       });
 
-  });    
+  });  
+
+          $(".depoimentos").slick({
+        centerMode: false,
+        slidesToShow: 2 ,
+        rows:2,
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevDepoimentos',
+          nextArrow: '#nextDepoimentos',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+              
+              }
+            }
+          ]});
+
+          $(".premiacao").slick({
+        centerMode: false,
+        slidesToShow: 4 ,
+       
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevPremiacao',
+          nextArrow: '#nextPremiacao',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+              
+              }
+            }
+          ]});
+
+
     </script>
 
 

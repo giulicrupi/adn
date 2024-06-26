@@ -7,7 +7,9 @@
                 'taxonomy' => 'produtos-bairro',
                 'hide_empty' => false,
             ));
+            
             foreach ($terms as $term) {
+
                 echo '<option value="' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</option>';
             }
             ?>

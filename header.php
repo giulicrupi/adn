@@ -36,10 +36,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Empreendimentos</a>
+          <a class="nav-link active" aria-current="page" href="<?php echo site_url(); ?>/produtos">Empreendimentos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">#VagasADN</a>
+          <a class="nav-link" href="<?php echo site_url(); ?>/vagas-adn/">#VagasADN</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo site_url(); ?>/contato/">Contato</a>
@@ -48,7 +48,7 @@
           <a class="nav-link" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Institucional</a>
+          <a class="nav-link" href="<?php echo site_url(); ?>/institucional/">Institucional</a>
         </li>        
       </ul>
 

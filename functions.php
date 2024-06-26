@@ -450,3 +450,16 @@ function add_webp_upload_mimes($upload_mimes) {
     return $upload_mimes;
 }
 add_filter('upload_mimes', 'add_webp_upload_mimes');
+
+
+
+
+
+
+// function enqueue_custom_admin_script() {
+//     wp_enqueue_script('youtube-playlist', get_template_directory_uri() . '/js/youtube-playlist.js', array('jquery'), null, true);
+//     wp_localize_script('youtube-playlist', 'youtubeApi', array(
+//         'apiKey' => 'AIzaSyAkb5OTlwEJhsjSaJV_iWJg1ynXT3ERm4s', // Substitua pela sua chave de API
+//     ));
+// }
+// add_action('acf/input/admin_enqueue_scripts', 'enqueue_custom_admin_script');

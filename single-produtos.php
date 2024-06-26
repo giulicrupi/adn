@@ -148,7 +148,8 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 					
 
 
-	</section>	
+	</section>
+
 	<?php 
 
 		$galeria_de_fachadas = get_field('galeria_de_fachadas', false);
@@ -638,7 +639,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 <?php } ?>
 	<?php 
 
-		$apresentacao_digital = have_rows('apresentacao_digital', false);
+		$apresentacao_digital = get_field('apresentacao_digital', false);
 		if (!empty($apresentacao_digital)) {
 	?>		
 	<section class="sect4-single">
@@ -765,89 +766,15 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 	<?php } ?>
 	<?php 
 
-		$cronograma_de_obras = get_field('cronograma_de_obras', false);
+		$cronograma_de_obras = get_field('iframe_da_playlist_de_obras', false);
 		if (!empty($cronograma_de_obras)) {
 	?>			
 	<section class="sect9-single">
 		<div class="container">
 			<p class="title">Andamento de <span>obra</span></p>
+
 			<div class="cont">
-				<?php if( have_rows('cronograma_de_obras') ): ?>
-				    <div class="row">
-				    <?php while( have_rows('cronograma_de_obras') ): the_row(); 
-				        ?>
-				        <div class="col-lg-6">
-				        	<div class="topico-obra">
-				        		<div class="linha">
-				        			<div class="traco"></div>
-				        			<p class="nome"><?php the_sub_field('topico_de_obra'); ?></p>
-				        			<div class="numero">
-				        				<p><?php the_sub_field('porcentagem_de_obra'); ?>%</p>
-				        			</div>
-				        		</div>
-				        		<div class="bar">
-				        			<div class="preench" style="width:<?php the_sub_field('porcentagem_de_obra'); ?>%;"></div>
-				        		</div>
-				        	</div>
-				        </div>
-				    <?php endwhile; ?>
-				    </div>
-				<?php endif; ?>
-				<div class="centro">
-		        	<div class="topico-obra-total">
-		        		<div class="linha">
-		        			<div class="traco"></div>
-		        			<p class="nome">Estágio da obra</p>
-		        			<div class="numero">
-		        				<p><?php the_field('valor_total_da_obra'); ?>%</p>
-		        			</div>
-		        		</div>
-		        		<div class="bar">
-		        			<div class="preench" style="width:<?php the_field('valor_total_da_obra'); ?>%;"></div>
-		        		</div>
-		        	</div>					
-				</div>
-
-				<?php
-				// Obtém as imagens da galeria ACF
-				$galeria = get_field('galeria_de_obra');
-
-				if( $galeria ): ?>
-					<div class="botao">
-						<button id="open-gallery">Ver fotos</button>
-					</div>	
-				    <div id="gallery" style="display:none;">
-				        <?php foreach( $galeria as $imagem ): ?>
-				            <a href="<?php echo esc_url($imagem['url']); ?>" data-fancybox="gallery" class="fancybox">
-				                <img src="<?php echo esc_url($imagem['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($imagem['alt']); ?>" />
-				            </a>
-				        <?php endforeach; ?>
-				    </div>
-
-				    <script type="text/javascript">
-				        jQuery(document).ready(function($) {
-				            $('#open-gallery').on('click', function() {
-				                $.fancybox.open($('.fancybox'), {
-				                    loop: true,
-				                    buttons: [
-				                        "zoom",
-				                        "share",
-				                        "slideShow",
-				                        "fullScreen",
-				                        "download",
-				                        "thumbs",
-				                        "close"
-				                    ],
-				                    thumbs: {
-				                        autoStart: true,
-				                        // axis: 'x'
-				                    }
-				                });
-				            });
-				        });
-				    </script>
-				<?php endif; ?>
-
+				<?php echo get_field('iframe_da_playlist_de_obras'); ?>
 			</div>
 		</div>
 	</section>
