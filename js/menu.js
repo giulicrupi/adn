@@ -104,3 +104,9 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
 
 
+$(document).ready(function(){
+    $(".btn-expand").click(function(){
+        $(".menu-mobile").toggleClass("ativo");
+        $(".btn-expand").toggleClass("ativo");
+    });
+});

@@ -54,7 +54,7 @@
 </section>
 <footer>
   <div class="container">
-    <div class="linha">
+    <div class="linha" id="desk">
       <div class="column1">
         <div class="content-footer">
           <img src="<?php echo get_template_directory_uri(); ?>/svg/logo-branco.svg" alt="" class="img-fluid logo">
@@ -182,6 +182,29 @@
         </div>
       </div>
 
+    </div>
+    <div id="mob">
+      <div class="row">
+        <div class="col-lg-6 col-6">
+          <div class="content">
+            <img src="<?php echo get_template_directory_uri(); ?>/svg/logo-branco.svg" alt="" class="img-fluid logo">
+            <div class="texto-footer">
+              <p><b>GRUPO ADN S.A.</b></p>
+              <p>CNPJ: 14.189.784/0001-52</p>
+              <p class="texto-foo"><b>Sede - São Carlos / SP</b></p>
+              <p class="texto-foo">Avenida São Carlos, 1885 - Centro</p>              
+            </div>            
+          </div>
+        </div>
+        <div class="col-lg-6 col-6">
+          <div class="cont-2">  
+              <div class="bars"> 
+                  <i class="fa-solid fa-bars"></i>
+              </div>  
+              <p class="texto-legal"><small>ADN Construtora © 2022 Direitos Reservados - Desenvolvido por MCIA</small></p>
+          </div>  
+        </div>
+      </div>
     </div>
   </div>
 </footer>      

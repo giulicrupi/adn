@@ -47,6 +47,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 			<div class="centro" style="background: url(<?php echo $imagemBanner['url']; ?>);">
 				<div class="overlay">
 					<div class="container">
+						<div class="alinhamento">
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="local">
@@ -85,7 +86,8 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 									</p>				
 								</div>
 							</div>
-						</div>	
+						</div>								
+						</div>
 						<p class="title"><?php the_title(); ?></p>
 
 
@@ -97,8 +99,9 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 			<div class="centro" style="background: url(<?php echo $imagemBannerMobile['url']; ?>);">
 				<div class="overlay">
 					<div class="container">
+						<div class="alinhamento">
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-lg-6 col-6 padding">
 								<div class="local">
 									<div class="icon">
 										<svg xmlns="http://www.w3.org/2000/svg" width="17" height="22" viewBox="0 0 17 22" fill="none">
@@ -119,7 +122,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 									</p>														
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-lg-6 col-6 padding">
 								<div class="categoria">
 									<p>
 				                        <?php 
@@ -135,7 +138,8 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 									</p>				
 								</div>
 							</div>
-						</div>	
+						</div>								
+						</div>
 						<p class="title"><?php the_title(); ?></p>
 
 
@@ -920,70 +924,5 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 		</div>
 	</section>
 	<?php } ?>			
-	<section class="sect4 sect11-single">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<div class="content">
-						<div class="centro">
-						<div class="row r1">
-							<div class="col-lg-5">
-								<p class="title">
-									Por que escolher <br>
-									um imóvel <b>ADN?</b>							
-								</p>								
-							</div>
-							<div class="col-lg-7">
-								<p class="texto-menor">Provocar sorrisos, emoções e alegrias é o motor que nos leva cada vez mais longe. Realizar sonhos é o nosso principal combustível.</p>
-							</div>
-						</div>			
-						<div class="row">
-							<div class="col-lg-4">
-								<div class="conteudo claro">
-									<div class="icon">
-										<img src="<?php echo get_template_directory_uri(); ?>/svg/chave.svg" alt="" class="img-fluid">
-									</div>
-									<p class="texto">
-										Proporcionamos bem-estar e qualidade de
-										vida com a
-										melhor relação 
-										custo-benefício.										
-									</p>				
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="conteudo vermelho">
-									<div class="icon">
-										<img src="<?php echo get_template_directory_uri(); ?>/svg/lista.svg" alt="" class="img-fluid">
-									</div>
-									<p class="texto">
-										Possuimos diferenciais de inovação e modernidade.										
-									</p>				
-								</div>
-							</div>	
-							<div class="col-lg-4">
-								<div class="conteudo amarelo">
-									<div class="icon">
-										<img src="<?php echo get_template_directory_uri(); ?>/svg/people.svg" alt="" class="img-fluid">
-									</div>
-									<p class="texto">
-										Possuimos diferenciais de inovação e modernidade.										
-									</p>				
-								</div>
-							</div>														
-						</div>	
-						<div class="botao">
-							<a href="#">
-								<button>Ver mais</button>
-							</a>
-						</div>						
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-5 p-0">
-					<div class="img" style="background: url(<?php echo site_url(); ?>/wp-content/uploads/2024/06/pq-escolher.jpg);">.</div>
-				</div>
-			</div>
-		</div>
-	</section>												
+<?php 	get_template_part( 'templates-part/sect4' ) ?>											
 <?php get_footer(); ?>

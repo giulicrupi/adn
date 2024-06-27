@@ -7,7 +7,7 @@
 	<section class="sect1-produtos">
 		<div class="container">
 			<p class="title text-center">Encontre aqui seu <span>futuro</span> apê</p>
-			<div class="produtos">
+			<div class="produtos-prod">
 				<div class="sub">
 					<p>Empreendimentos <span>ADN</span></p>
 					<?php get_template_part( 'templates-part/filtro' ); ?>

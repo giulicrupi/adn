@@ -476,12 +476,12 @@ a:hover {
 .sect2 .container .produtos2 {
   margin-top: 4%;
 }
-.card-do-prod, .sect1-produtos .container .produtos .row .card-prod, .sect10-single .container .card-prod, .sect2 .container .produtos .card-prod, .sect2 .container .produtos2 .card-prod {
+.card-do-prod, .sect1-produtos .container .produtos-prod .row .card-prod, .sect10-single .container .card-prod, .sect2 .container .produtos .card-prod, .sect2 .container .produtos2 .card-prod {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.card-do-prod .img, .sect1-produtos .container .produtos .row .card-prod .img, .sect10-single .container .card-prod .img, .sect2 .container .produtos .card-prod .img, .sect2 .container .produtos2 .card-prod .img {
+.card-do-prod .img, .sect1-produtos .container .produtos-prod .row .card-prod .img, .sect10-single .container .card-prod .img, .sect2 .container .produtos .card-prod .img, .sect2 .container .produtos2 .card-prod .img {
   height: 40vh;
   background-size: cover !important;
   background-position: center !important;
@@ -489,11 +489,11 @@ a:hover {
   padding: 3%;
 }
 @media (max-width: 980px) {
-  .card-do-prod .img, .sect1-produtos .container .produtos .row .card-prod .img, .sect10-single .container .card-prod .img, .sect2 .container .produtos .card-prod .img, .sect2 .container .produtos2 .card-prod .img {
+  .card-do-prod .img, .sect1-produtos .container .produtos-prod .row .card-prod .img, .sect10-single .container .card-prod .img, .sect2 .container .produtos .card-prod .img, .sect2 .container .produtos2 .card-prod .img {
     height: 28vh;
   }
 }
-.card-do-prod .img .categoria, .sect1-produtos .container .produtos .row .card-prod .img .categoria, .sect10-single .container .card-prod .img .categoria, .sect2 .container .produtos .card-prod .img .categoria, .sect2 .container .produtos2 .card-prod .img .categoria {
+.card-do-prod .img .categoria, .sect1-produtos .container .produtos-prod .row .card-prod .img .categoria, .sect10-single .container .card-prod .img .categoria, .sect2 .container .produtos .card-prod .img .categoria, .sect2 .container .produtos2 .card-prod .img .categoria {
   background: #FFD100;
   padding: 0.5vh 3vh;
   width: fit-content;
@@ -502,15 +502,15 @@ a:hover {
   border-radius: 50px;
 }
 @media (max-width: 980px) {
-  .card-do-prod .img .categoria, .sect1-produtos .container .produtos .row .card-prod .img .categoria, .sect10-single .container .card-prod .img .categoria, .sect2 .container .produtos .card-prod .img .categoria, .sect2 .container .produtos2 .card-prod .img .categoria {
+  .card-do-prod .img .categoria, .sect1-produtos .container .produtos-prod .row .card-prod .img .categoria, .sect10-single .container .card-prod .img .categoria, .sect2 .container .produtos .card-prod .img .categoria, .sect2 .container .produtos2 .card-prod .img .categoria {
     font-size: 9px;
   }
 }
-.card-do-prod .infos, .sect1-produtos .container .produtos .row .card-prod .infos, .sect10-single .container .card-prod .infos, .sect2 .container .produtos .card-prod .infos, .sect2 .container .produtos2 .card-prod .infos {
+.card-do-prod .infos, .sect1-produtos .container .produtos-prod .row .card-prod .infos, .sect10-single .container .card-prod .infos, .sect2 .container .produtos .card-prod .infos, .sect2 .container .produtos2 .card-prod .infos {
   padding: 6% 3%;
   background: white;
 }
-.card-do-prod .infos .nome-prod, .sect1-produtos .container .produtos .row .card-prod .infos .nome-prod, .sect10-single .container .card-prod .infos .nome-prod, .sect2 .container .produtos .card-prod .infos .nome-prod, .sect2 .container .produtos2 .card-prod .infos .nome-prod {
+.card-do-prod .infos .nome-prod, .sect1-produtos .container .produtos-prod .row .card-prod .infos .nome-prod, .sect10-single .container .card-prod .infos .nome-prod, .sect2 .container .produtos .card-prod .infos .nome-prod, .sect2 .container .produtos2 .card-prod .infos .nome-prod {
   font-size: 25px;
   margin-bottom: 2%;
   text-align: center;
@@ -518,22 +518,22 @@ a:hover {
   color: #2F2F2F;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .nome-prod, .sect1-produtos .container .produtos .row .card-prod .infos .nome-prod, .sect10-single .container .card-prod .infos .nome-prod, .sect2 .container .produtos .card-prod .infos .nome-prod, .sect2 .container .produtos2 .card-prod .infos .nome-prod {
+  .card-do-prod .infos .nome-prod, .sect1-produtos .container .produtos-prod .row .card-prod .infos .nome-prod, .sect10-single .container .card-prod .infos .nome-prod, .sect2 .container .produtos .card-prod .infos .nome-prod, .sect2 .container .produtos2 .card-prod .infos .nome-prod {
     font-size: 18px;
     font-weight: 800;
   }
 }
-.card-do-prod .infos .centro, .sect1-produtos .container .produtos .row .card-prod .infos .centro, .sect10-single .container .card-prod .infos .centro, .sect2 .container .produtos .card-prod .infos .centro, .sect2 .container .produtos2 .card-prod .infos .centro {
+.card-do-prod .infos .centro, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro, .sect10-single .container .card-prod .infos .centro, .sect2 .container .produtos .card-prod .infos .centro, .sect2 .container .produtos2 .card-prod .infos .centro {
   display: flex;
   justify-content: center;
   margin-bottom: 2%;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .centro, .sect1-produtos .container .produtos .row .card-prod .infos .centro, .sect10-single .container .card-prod .infos .centro, .sect2 .container .produtos .card-prod .infos .centro, .sect2 .container .produtos2 .card-prod .infos .centro {
+  .card-do-prod .infos .centro, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro, .sect10-single .container .card-prod .infos .centro, .sect2 .container .produtos .card-prod .infos .centro, .sect2 .container .produtos2 .card-prod .infos .centro {
     justify-content: start;
   }
 }
-.card-do-prod .infos .centro .local, .sect1-produtos .container .produtos .row .card-prod .infos .centro .local, .sect10-single .container .card-prod .infos .centro .local, .sect2 .container .produtos .card-prod .infos .centro .local, .sect2 .container .produtos2 .card-prod .infos .centro .local {
+.card-do-prod .infos .centro .local, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local, .sect10-single .container .card-prod .infos .centro .local, .sect2 .container .produtos .card-prod .infos .centro .local, .sect2 .container .produtos2 .card-prod .infos .centro .local {
   background: #0071CE;
   display: flex;
   justify-content: center;
@@ -542,49 +542,49 @@ a:hover {
   border-radius: 50px;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .centro .local, .sect1-produtos .container .produtos .row .card-prod .infos .centro .local, .sect10-single .container .card-prod .infos .centro .local, .sect2 .container .produtos .card-prod .infos .centro .local, .sect2 .container .produtos2 .card-prod .infos .centro .local {
+  .card-do-prod .infos .centro .local, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local, .sect10-single .container .card-prod .infos .centro .local, .sect2 .container .produtos .card-prod .infos .centro .local, .sect2 .container .produtos2 .card-prod .infos .centro .local {
     padding: 0.1vh 2.5vh;
   }
 }
-.card-do-prod .infos .centro .local p, .sect1-produtos .container .produtos .row .card-prod .infos .centro .local p, .sect10-single .container .card-prod .infos .centro .local p, .sect2 .container .produtos .card-prod .infos .centro .local p, .sect2 .container .produtos2 .card-prod .infos .centro .local p {
+.card-do-prod .infos .centro .local p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local p, .sect10-single .container .card-prod .infos .centro .local p, .sect2 .container .produtos .card-prod .infos .centro .local p, .sect2 .container .produtos2 .card-prod .infos .centro .local p {
   color: white;
   font-size: 12px;
   font-weight: 300;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .centro .local p, .sect1-produtos .container .produtos .row .card-prod .infos .centro .local p, .sect10-single .container .card-prod .infos .centro .local p, .sect2 .container .produtos .card-prod .infos .centro .local p, .sect2 .container .produtos2 .card-prod .infos .centro .local p {
+  .card-do-prod .infos .centro .local p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local p, .sect10-single .container .card-prod .infos .centro .local p, .sect2 .container .produtos .card-prod .infos .centro .local p, .sect2 .container .produtos2 .card-prod .infos .centro .local p {
     font-size: 9px;
     margin-bottom: -5%;
   }
 }
-.card-do-prod .infos .centro .local .icon svg, .sect1-produtos .container .produtos .row .card-prod .infos .centro .local .icon svg, .sect10-single .container .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos2 .card-prod .infos .centro .local .icon svg {
+.card-do-prod .infos .centro .local .icon svg, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local .icon svg, .sect10-single .container .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos2 .card-prod .infos .centro .local .icon svg {
   width: 70%;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .centro .local .icon svg, .sect1-produtos .container .produtos .row .card-prod .infos .centro .local .icon svg, .sect10-single .container .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos2 .card-prod .infos .centro .local .icon svg {
+  .card-do-prod .infos .centro .local .icon svg, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local .icon svg, .sect10-single .container .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos2 .card-prod .infos .centro .local .icon svg {
     width: 54%;
   }
 }
-.card-do-prod .infos .content, .sect1-produtos .container .produtos .row .card-prod .infos .content, .sect10-single .container .card-prod .infos .content, .sect2 .container .produtos .card-prod .infos .content, .sect2 .container .produtos2 .card-prod .infos .content {
+.card-do-prod .infos .content, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content, .sect10-single .container .card-prod .infos .content, .sect2 .container .produtos .card-prod .infos .content, .sect2 .container .produtos2 .card-prod .infos .content {
   display: flex;
   justify-content: center;
 }
-.card-do-prod .infos .content .comandos, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos, .sect10-single .container .card-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos, .sect2 .container .produtos2 .card-prod .infos .content .comandos {
+.card-do-prod .infos .content .comandos, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos, .sect10-single .container .card-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos, .sect2 .container .produtos2 .card-prod .infos .content .comandos {
   width: 75%;
   display: flex;
   align-items: center;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .content .comandos, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos, .sect10-single .container .card-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos, .sect2 .container .produtos2 .card-prod .infos .content .comandos {
+  .card-do-prod .infos .content .comandos, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos, .sect10-single .container .card-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos, .sect2 .container .produtos2 .card-prod .infos .content .comandos {
     width: 88%;
   }
 }
-.card-do-prod .infos .content .comandos .quarto, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos .quarto, .sect10-single .container .card-prod .infos .content .comandos .quarto, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto {
+.card-do-prod .infos .content .comandos .quarto, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto, .sect10-single .container .card-prod .infos .content .comandos .quarto, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto {
   width: 33.333%;
   display: flex;
   align-items: center;
 }
-.card-do-prod .infos .content .comandos .quarto .icon, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos .quarto .icon, .sect10-single .container .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto .icon {
+.card-do-prod .infos .content .comandos .quarto .icon, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto .icon, .sect10-single .container .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto .icon {
   width: 2.5vh;
   height: 2.5vh;
   background: #3CB4E5;
@@ -595,32 +595,32 @@ a:hover {
   margin-right: 0.5vh;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .content .comandos .quarto .icon, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos .quarto .icon, .sect10-single .container .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto .icon {
+  .card-do-prod .infos .content .comandos .quarto .icon, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto .icon, .sect10-single .container .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto .icon {
     width: 1.7vh;
     height: 1.7vh;
   }
 }
-.card-do-prod .infos .content .comandos .quarto .icon svg, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos .quarto .icon svg, .sect10-single .container .card-prod .infos .content .comandos .quarto .icon svg, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon svg, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto .icon svg {
+.card-do-prod .infos .content .comandos .quarto .icon svg, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto .icon svg, .sect10-single .container .card-prod .infos .content .comandos .quarto .icon svg, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto .icon svg, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto .icon svg {
   width: 70%;
 }
-.card-do-prod .infos .content .comandos .quarto p, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos .quarto p, .sect10-single .container .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto p {
+.card-do-prod .infos .content .comandos .quarto p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto p, .sect10-single .container .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto p {
   font-weight: 400;
   font-size: 13px;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .content .comandos .quarto p, .sect1-produtos .container .produtos .row .card-prod .infos .content .comandos .quarto p, .sect10-single .container .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto p {
+  .card-do-prod .infos .content .comandos .quarto p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto p, .sect10-single .container .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto p {
     font-size: 8px;
   }
 }
-.card-do-prod .infos .botao, .sect1-produtos .container .produtos .row .card-prod .infos .botao, .sect10-single .container .card-prod .infos .botao, .sect2 .container .produtos .card-prod .infos .botao, .sect2 .container .produtos2 .card-prod .infos .botao {
+.card-do-prod .infos .botao, .sect1-produtos .container .produtos-prod .row .card-prod .infos .botao, .sect10-single .container .card-prod .infos .botao, .sect2 .container .produtos .card-prod .infos .botao, .sect2 .container .produtos2 .card-prod .infos .botao {
   display: flex;
   margin-top: 6%;
   justify-content: center;
 }
-.card-do-prod .infos .botao .centro, .sect1-produtos .container .produtos .row .card-prod .infos .botao .centro, .sect10-single .container .card-prod .infos .botao .centro, .sect2 .container .produtos .card-prod .infos .botao .centro, .sect2 .container .produtos2 .card-prod .infos .botao .centro {
+.card-do-prod .infos .botao .centro, .sect1-produtos .container .produtos-prod .row .card-prod .infos .botao .centro, .sect10-single .container .card-prod .infos .botao .centro, .sect2 .container .produtos .card-prod .infos .botao .centro, .sect2 .container .produtos2 .card-prod .infos .botao .centro {
   width: 55%;
 }
-.card-do-prod .infos .botao .centro button, .sect1-produtos .container .produtos .row .card-prod .infos .botao .centro button, .sect10-single .container .card-prod .infos .botao .centro button, .sect2 .container .produtos .card-prod .infos .botao .centro button, .sect2 .container .produtos2 .card-prod .infos .botao .centro button {
+.card-do-prod .infos .botao .centro button, .sect1-produtos .container .produtos-prod .row .card-prod .infos .botao .centro button, .sect10-single .container .card-prod .infos .botao .centro button, .sect2 .container .produtos .card-prod .infos .botao .centro button, .sect2 .container .produtos2 .card-prod .infos .botao .centro button {
   background: #D02C2F;
   border: 1px solid #D02C2F;
   color: white;
@@ -630,32 +630,32 @@ a:hover {
   transition: 0.5s;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .botao .centro button, .sect1-produtos .container .produtos .row .card-prod .infos .botao .centro button, .sect10-single .container .card-prod .infos .botao .centro button, .sect2 .container .produtos .card-prod .infos .botao .centro button, .sect2 .container .produtos2 .card-prod .infos .botao .centro button {
+  .card-do-prod .infos .botao .centro button, .sect1-produtos .container .produtos-prod .row .card-prod .infos .botao .centro button, .sect10-single .container .card-prod .infos .botao .centro button, .sect2 .container .produtos .card-prod .infos .botao .centro button, .sect2 .container .produtos2 .card-prod .infos .botao .centro button {
     height: 4vh;
     padding: 0 0;
   }
 }
-.card-do-prod .infos .botao .centro button span, .sect1-produtos .container .produtos .row .card-prod .infos .botao .centro button span, .sect10-single .container .card-prod .infos .botao .centro button span, .sect2 .container .produtos .card-prod .infos .botao .centro button span, .sect2 .container .produtos2 .card-prod .infos .botao .centro button span {
+.card-do-prod .infos .botao .centro button span, .sect1-produtos .container .produtos-prod .row .card-prod .infos .botao .centro button span, .sect10-single .container .card-prod .infos .botao .centro button span, .sect2 .container .produtos .card-prod .infos .botao .centro button span, .sect2 .container .produtos2 .card-prod .infos .botao .centro button span {
   margin-right: 1vh;
   font-size: 14px;
   font-weight: 500;
 }
 @media (max-width: 980px) {
-  .card-do-prod .infos .botao .centro button span, .sect1-produtos .container .produtos .row .card-prod .infos .botao .centro button span, .sect10-single .container .card-prod .infos .botao .centro button span, .sect2 .container .produtos .card-prod .infos .botao .centro button span, .sect2 .container .produtos2 .card-prod .infos .botao .centro button span {
+  .card-do-prod .infos .botao .centro button span, .sect1-produtos .container .produtos-prod .row .card-prod .infos .botao .centro button span, .sect10-single .container .card-prod .infos .botao .centro button span, .sect2 .container .produtos .card-prod .infos .botao .centro button span, .sect2 .container .produtos2 .card-prod .infos .botao .centro button span {
     font-size: 9px;
   }
 }
-.card-do-prod .infos .botao .centro button svg, .sect1-produtos .container .produtos .row .card-prod .infos .botao .centro button svg, .sect10-single .container .card-prod .infos .botao .centro button svg, .sect2 .container .produtos .card-prod .infos .botao .centro button svg, .sect2 .container .produtos2 .card-prod .infos .botao .centro button svg {
+.card-do-prod .infos .botao .centro button svg, .sect1-produtos .container .produtos-prod .row .card-prod .infos .botao .centro button svg, .sect10-single .container .card-prod .infos .botao .centro button svg, .sect2 .container .produtos .card-prod .infos .botao .centro button svg, .sect2 .container .produtos2 .card-prod .infos .botao .centro button svg {
   width: 10%;
 }
-.card-do-prod:hover .infos .botao .centro button, .sect1-produtos .container .produtos .row .card-prod:hover .infos .botao .centro button, .sect10-single .container .card-prod:hover .infos .botao .centro button, .sect2 .container .produtos .card-prod:hover .infos .botao .centro button, .sect2 .container .produtos2 .card-prod:hover .infos .botao .centro button {
+.card-do-prod:hover .infos .botao .centro button, .sect1-produtos .container .produtos-prod .row .card-prod:hover .infos .botao .centro button, .sect10-single .container .card-prod:hover .infos .botao .centro button, .sect2 .container .produtos .card-prod:hover .infos .botao .centro button, .sect2 .container .produtos2 .card-prod:hover .infos .botao .centro button {
   background: #FFD100;
   border-color: #FFD100;
 }
-.card-do-prod:hover .infos .botao .centro button span, .sect1-produtos .container .produtos .row .card-prod:hover .infos .botao .centro button span, .sect10-single .container .card-prod:hover .infos .botao .centro button span, .sect2 .container .produtos .card-prod:hover .infos .botao .centro button span, .sect2 .container .produtos2 .card-prod:hover .infos .botao .centro button span {
+.card-do-prod:hover .infos .botao .centro button span, .sect1-produtos .container .produtos-prod .row .card-prod:hover .infos .botao .centro button span, .sect10-single .container .card-prod:hover .infos .botao .centro button span, .sect2 .container .produtos .card-prod:hover .infos .botao .centro button span, .sect2 .container .produtos2 .card-prod:hover .infos .botao .centro button span {
   color: black;
 }
-.card-do-prod:hover .infos .botao .centro button svg, .sect1-produtos .container .produtos .row .card-prod:hover .infos .botao .centro button svg, .sect10-single .container .card-prod:hover .infos .botao .centro button svg, .sect2 .container .produtos .card-prod:hover .infos .botao .centro button svg, .sect2 .container .produtos2 .card-prod:hover .infos .botao .centro button svg {
+.card-do-prod:hover .infos .botao .centro button svg, .sect1-produtos .container .produtos-prod .row .card-prod:hover .infos .botao .centro button svg, .sect10-single .container .card-prod:hover .infos .botao .centro button svg, .sect2 .container .produtos .card-prod:hover .infos .botao .centro button svg, .sect2 .container .produtos2 .card-prod:hover .infos .botao .centro button svg {
   filter: brightness(0);
 }
 
@@ -3103,6 +3103,10 @@ footer .container .linha .column5 .imgs .img .centro {
 .sect1-produtos .container .sub .form-sec form select {
   padding: 0 8%;
 }
+.sect1-produtos .container .produtos-prod .row .card-prod {
+  margin-bottom: 7%;
+}
+
 .whatsapp-fixo {
   position: fixed;
   right: 2%;
@@ -3149,6 +3153,33 @@ footer .container .linha .column5 .imgs .img .centro {
   border: 1px solid #0071CE;
   color: white;
   padding: 1% 2%;
+}
+
+.menu-mobile {
+  width: 100%;
+  height: 0%;
+  transition: 0.5s;
+  overflow: hidden;
+  visibility: collapse;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #0071CE;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+.menu-mobile .container ul li {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+.menu-mobile.ativo {
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 980px) {
@@ -3199,6 +3230,25 @@ footer .container .linha .column5 .imgs .img .centro {
     color: white;
     font-size: 25px;
   }
+  .menu .btn-expand span {
+    display: block;
+    width: 4vh;
+    margin-bottom: 4px;
+    height: 0.5vh;
+    background: white;
+    border-radius: 50px;
+    transition: 0.5s;
+  }
+  .menu .btn-expand.ativo span:nth-child(1) {
+    transform: rotate(50deg);
+  }
+  .menu .btn-expand.ativo span:nth-child(2) {
+    display: none;
+  }
+  .menu .btn-expand.ativo span:nth-child(3) {
+    transform: rotate(310deg);
+    margin-top: -7px;
+  }
   .menu .container .botoes .cliente a {
     justify-content: center;
   }
@@ -3235,10 +3285,10 @@ footer .container .linha .column5 .imgs .img .centro {
   .banner-home .banner .slide .centro .overlay .container .row .local p {
     font-size: 9px;
   }
-  .banner-home .banner .slide .centro .overlay .container .row .local .icon {
+  .banner-home .banner .slide .centro .overlay .container .row .local .icon, .banner-single .slide .centro .overlay .container .row .local .icon {
     margin-right: 0.1vh;
   }
-  .banner-home .banner .slide .centro .overlay .container .row .local .icon svg {
+  .banner-home .banner .slide .centro .overlay .container .row .local .icon svg, .banner-single .slide .centro .overlay .container .row .local .icon svg {
     width: 60%;
   }
   .banner-home .banner .slide .centro .overlay .container .row .local p {
@@ -3246,10 +3296,10 @@ footer .container .linha .column5 .imgs .img .centro {
     margin-bottom: 0;
     line-height: 110%;
   }
-  .banner-home .banner .slide .centro .overlay .container .row .categoria p {
+  .banner-home .banner .slide .centro .overlay .container .row .categoria p, .banner-single .slide .centro .overlay .container .row .local p, .banner-single .slide .centro .overlay .container .row .categoria p {
     font-size: 9px;
   }
-  .banner-home .banner .slide .centro .overlay .container .row .padding {
+  .banner-home .banner .slide .centro .overlay .container .row .padding, .banner-single .slide .centro .overlay .container .row .padding {
     padding: 0 2%;
   }
   .banner-home .banner .slide .centro .overlay .container .conts {
@@ -3469,6 +3519,291 @@ footer .container .linha .column5 .imgs .img .centro {
   }
   .siga .container {
     max-width: 70%;
+  }
+  footer .texto-footer {
+    font-size: 7px;
+    margin-top: 3%;
+  }
+  footer .content .logo {
+    margin-bottom: 10%;
+  }
+  footer .cont-2 {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 5%;
+  }
+  footer .texto-legal {
+    font-size: 8px;
+    margin-top: 8%;
+  }
+  .sect1-produtos .container .title {
+    font-size: 30px;
+  }
+  .sect1-produtos .container .sub {
+    display: block;
+    margin-top: 8%;
+  }
+  .sect1-produtos .container .sub p {
+    font-size: 20px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  .sect1-produtos .container .sub .form-sec {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5%;
+  }
+  .banner-vagas .container .row .img {
+    height: 34vh;
+    margin-top: 8%;
+  }
+  .banner-vagas .container .row .content {
+    padding-right: 10%;
+  }
+  .banner-vagas .container .row .content .title, .contato .container .title {
+    line-height: 120%;
+    font-size: 30px;
+  }
+  .banner-vagas .container .row .content .texto {
+    font-size: 12px;
+  }
+  .sect1-vagas .container .card-cultura {
+    margin-bottom: 8%;
+  }
+  .sect1-vagas .container .card-cultura .centro .icon svg {
+    width: 33%;
+  }
+  .sect2-vagas .container .texto {
+    font-size: 13px;
+  }
+  .sect3-vagas .slick-arrow {
+    width: 5vh;
+    height: 5vh;
+  }
+  .sect3-vagas .slick-arrow.rightButton {
+    right: 1%;
+  }
+  .sect3-vagas .slick-arrow.leftButton {
+    left: 1%;
+  }
+  .sect3-vagas .container .item iframe {
+    height: 20vh;
+  }
+  .sect4-vagas .container p.texto {
+    width: 100%;
+    font-size: 13px;
+  }
+  .sect1-vagas .container, .sect2-vagas .container, .sect4-vagas .container, .sect5-vagas .container {
+    max-width: 85%;
+  }
+  .sect5-vagas .container .row .content, .sect4-sobre .container .row .conteudo {
+    padding: 10% 0%;
+  }
+  .sect5-vagas .container .row .content .texto {
+    font-size: 13px;
+  }
+  .contato .container, .sect4-sobre .container {
+    max-width: 85%;
+  }
+  .contato .forma {
+    display: none;
+  }
+  .contato .container .form, .contato .container .form .texto {
+    width: 100%;
+  }
+  .contato .container .form .texto {
+    font-size: 13px;
+  }
+  .contato .container .form .form-sec {
+    width: 100%;
+  }
+  .contato .container .form .title-form {
+    font-size: 25px;
+  }
+  .banner-sobre .container .title {
+    font-size: 30px;
+  }
+  .banner-sobre {
+    height: 45vh;
+  }
+  .sect1-sobre .container {
+    max-width: 85%;
+  }
+  .sect1-sobre .container .row .title br {
+    display: none;
+  }
+  .sect1-sobre .container .row .texto, .sect2-sobre .container .texto, .sect3-sobre .container .texto {
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 13px;
+  }
+  .sect3-sobre .container {
+    max-width: 90%;
+  }
+  .sect3-sobre .container .card-historia .centro .icon {
+    width: 7vh;
+    height: 6vh;
+  }
+  .sect3-sobre .container .card-historia .centro .conteudo .number {
+    font-size: 35px;
+  }
+  .sect3-sobre .container .card-historia .centro .conteudo {
+    width: 80%;
+  }
+  .sect3-sobre .container .card-historia .centro .conteudo .menor {
+    font-size: 13px;
+  }
+  .sect3-sobre .container .card-historia .centro {
+    height: 27vh;
+  }
+  .sect4-sobre .container .row .texto {
+    width: 100%;
+    font-size: 13px;
+  }
+  .sect4-sobre .container .row .botao {
+    width: 60%;
+  }
+  .sect4-sobre .container .row .botao p {
+    font-size: 13px;
+  }
+  .sect5-sobre {
+    padding: 0 0;
+  }
+  .sect5-sobre .container .slick-arrow {
+    width: 5vh;
+    height: 5vh;
+  }
+  .banner-single .slide .centro .overlay .container .row {
+    width: 100%;
+  }
+  .banner-single .slide .centro .overlay .container .alinhamento {
+    display: flex;
+    justify-content: center;
+  }
+  .banner-single .slide .centro .overlay .container .title {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 3%;
+  }
+  .banner-single .slide {
+    height: 55vh;
+  }
+  .banner-single .slide .centro .overlay {
+    padding-bottom: 25%;
+  }
+  .sect1-single .container .content .endereco {
+    font-size: 13px;
+  }
+  .sect1-single .container .content .comandos .quarto p {
+    font-size: 9px;
+  }
+  .sect1-single .container .content .comandos {
+    width: 100%;
+  }
+  .sect1-single .container .content .comandos .quarto .icon {
+    margin-right: 0.5vh;
+  }
+  .sect1-single .container .content .texto-conceito {
+    font-size: 13px;
+    width: 100%;
+  }
+  .sect1-single .container .content .botao, .sect1-single .container .content .botao-whats {
+    width: 70%;
+  }
+  .sect1-single .container .content .botao a, .sect1-single .container .content .botao-whats a {
+    height: 7vh;
+  }
+  .sect1-single .container .content .botao-whats a .linha svg, .sect1-single .container .content .botao a .linha svg {
+    width: 60%;
+  }
+  .sect1-single .container {
+    max-width: 85%;
+  }
+  .sect1-single .container .fachada .item {
+    padding: 0;
+  }
+  .sect1-single .container .galeria-fachadas .img {
+    height: 40vh;
+    margin-top: 10%;
+  }
+  .sect1-single .container .slick-arrow.rightButton {
+    right: 10%;
+  }
+  .sect1-single .container .slick-arrow.leftButton {
+    left: 10%;
+  }
+  .sect1-single .container .slick-arrow, .sect1-single .container .galeria-fachadas .slick-dots {
+    bottom: -15%;
+  }
+  .sect2-single .container .nav-tabs li {
+    margin-bottom: 1vh;
+  }
+  .sect2-single .container .tab-content .slider-galeria .img, .sect2-single .container .tab-content .slider-planta .img, .sect2-single .container .tab-content .slider-implantacao .img {
+    height: 35vh;
+  }
+  .sect2-single .container .tab-content .slider-galeria-thumbs .item .img, .sect2-single .container .tab-content .slider-planta-thumbs .item .img, .sect2-single .container .tab-content .slider-implantacao-thumbs .item .img {
+    height: 15vh;
+  }
+  .sect2-single .container #video iframe {
+    height: 40vh;
+  }
+  .sect3-single .container .nav-tabs li {
+    margin-bottom: 1vh;
+  }
+  .sect3-single .container .imagem {
+    height: 35vh;
+  }
+  .sect4-single .container {
+    max-width: 85%;
+  }
+  .sect4-single .container .content {
+    padding: 10% 0;
+  }
+  .sect4-single .container .texto {
+    font-size: 13px;
+  }
+  .sect4-single .container .imagem-book {
+    height: 45vh;
+  }
+  .sect5-single .container {
+    max-width: 85%;
+  }
+  .sect5-single .container .form {
+    padding: 10% 0;
+  }
+  .sect5-single .container .form input[type=submit] {
+    float: inherit;
+  }
+  .sect5-single .container .form .wpcf7-list-item {
+    font-size: 13px;
+  }
+  .sect6-single .container, .sect7-single .container, .sect9-single .container {
+    max-width: 85%;
+  }
+  .sect6-single .container .endereco {
+    font-size: 13px;
+  }
+  .sect6-single .container .mapa iframe {
+    height: 45vh;
+  }
+  .sect7-single .container .content {
+    margin-bottom: 10%;
+  }
+  .sect8-single .container .endereco .button p {
+    font-size: 13px;
+  }
+  .sect7-single .container .content .img {
+    height: 40vh;
+  }
+  .sect9-single .container .cont iframe {
+    height: 22vh;
+  }
+  .sect10-single .container .btn-todos .botao {
+    width: 60%;
+    margin-bottom: 10%;
+  }
+  .sect10-single .container .card-prod {
+    margin-bottom: 10%;
   }
 }
 

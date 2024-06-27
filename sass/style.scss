@@ -3212,10 +3212,11 @@ footer{
     			}
     		}
     	}
-    	.produtos{
+    	.produtos-prod{
     		.row{
     			.card-prod{
     				@extend .card-do-prod;
+    				margin-bottom: 7%;
     			}
     		}
     	}
@@ -3273,6 +3274,39 @@ footer{
 		}
 	}
 }
+
+
+.menu-mobile{
+	width: 100%;
+	height: 0%;
+	transition: .5s;
+	overflow: hidden;
+	visibility: collapse;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: $azul;
+	display: flex;
+	align-items: center;
+	opacity: 0;
+	.container{
+		ul{
+			li{
+				text-align: center;
+				color: white;
+				font-size: 30px;
+				font-weight: 600;
+			}
+		}
+	}	
+	&.ativo{
+		height: 100%;
+		visibility: visible;
+		opacity: 1;
+
+	}
+}
 @media(max-width: 980px){
 	#desk{
 		display: none;
@@ -3324,6 +3358,30 @@ footer{
 	.menu .btn-expand{
 		color: white;
 		font-size: 25px;
+		span{
+			display: block;
+			width: 4vh;
+			margin-bottom: 4px;
+			height: .5vh;
+			background: white;
+			border-radius: 50px;
+			transition: .5s;
+
+		}
+		&.ativo{
+			span{
+			&:nth-child(1){
+				transform: rotate(50deg);
+			}
+			&:nth-child(2){
+				display: none;
+			}
+			&:nth-child(3){
+			    transform: rotate(310deg);
+			    margin-top: -7px;
+			}				
+			}	
+		}
 	}
 	.menu .container .botoes .cliente a{
 		justify-content: center;
@@ -3361,7 +3419,7 @@ footer{
 	.banner-home .banner .slide .centro .overlay .container .row .local p{
 		font-size: 9px;
 	}
-	.banner-home .banner .slide .centro .overlay .container .row .local .icon {
+	.banner-home .banner .slide .centro .overlay .container .row .local .icon, .banner-single .slide .centro .overlay .container .row .local .icon {
 	    margin-right: .1vh;
 	    svg{
 	    	width: 60%;
@@ -3372,10 +3430,10 @@ footer{
 	    margin-bottom: 0;
 	    line-height: 110%;
 	}
-	.banner-home .banner .slide .centro .overlay .container .row .categoria p {
+	.banner-home .banner .slide .centro .overlay .container .row .categoria p, .banner-single .slide .centro .overlay .container .row .local p, .banner-single .slide .centro .overlay .container .row .categoria p {
 	    font-size: 9px;
 	}	
-	.banner-home .banner .slide .centro .overlay .container .row{
+	.banner-home .banner .slide .centro .overlay .container .row, .banner-single .slide .centro .overlay .container .row {
 		.padding{
 	        padding: 0 2%;		
 		}
@@ -3611,5 +3669,301 @@ footer{
 		.container{
 			    max-width: 70%;
 		}
+	}
+	footer .texto-footer{
+		font-size: 7px;
+		margin-top: 3%;
+	}
+	footer .content .logo{
+		margin-bottom: 10%;
+	}
+	footer{
+		.cont-2{
+			text-align: right;
+			font-size: 20px;
+			margin-top: 5%;
+		}
+		.texto-legal{
+			font-size: 8px;
+			margin-top: 8%; 
+		}
+	}
+	.sect1-produtos .container .title{
+		font-size: 30px;
+	}
+	.sect1-produtos .container .sub{
+		display: block;
+		margin-top: 8%; 
+		p{
+			font-size: 20px;
+			margin-top: 3%;
+			margin-bottom: 2%; 
+		}
+	}
+	.sect1-produtos .container .sub .form-sec{
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 5%;
+	}
+	.banner-vagas .container .row .img{
+		height: 34vh;
+		margin-top: 8%; 
+	}
+	.banner-vagas .container .row .content{
+		padding-right: 10%;
+	}
+	.banner-vagas .container .row .content .title, .contato .container .title {
+		line-height: 120%;
+		font-size: 30px;
+	}
+	.banner-vagas .container .row .content .texto{
+		font-size: 12px;
+	}
+	.sect1-vagas .container .card-cultura{
+		margin-bottom: 8%;
+		.centro{
+			.icon{
+				svg{
+					width: 33%;
+				}
+			}
+		}
+	}
+	.sect2-vagas .container .texto{
+		font-size: 13px;
+	}
+	.sect3-vagas .slick-arrow{
+		width: 5vh;
+		height: 5vh;
+	}
+	.sect3-vagas .slick-arrow.rightButton{
+		right: 1%;
+	}
+	.sect3-vagas .slick-arrow.leftButton{
+		left: 1%;
+	}
+	.sect3-vagas .container .item iframe{
+		height: 20vh;
+	}
+	.sect4-vagas .container p.texto{
+		width: 100%;
+		font-size: 13px;
+	}
+	.sect1-vagas, .sect2-vagas, .sect4-vagas, .sect5-vagas{
+		.container{
+			max-width: 85%;
+		}
+	}
+	.sect5-vagas .container .row .content , .sect4-sobre .container .row .conteudo{
+	    padding: 10% 0%;
+	}	
+	.sect5-vagas .container .row .content .texto{
+		font-size: 13px;
+	}
+	.contato .container, .sect4-sobre .container {
+		max-width: 85%;
+	}
+	.contato .forma{
+		display: none;
+	}
+	.contato .container .form, .contato .container .form .texto {
+	    width: 100%;
+	}	
+	.contato .container .form .texto{
+		font-size: 13px;
+	}
+	.contato .container .form .form-sec{
+		width: 100%;
+	}
+	.contato .container .form .title-form{
+		font-size: 25px;
+	}
+	.banner-sobre .container .title{
+		font-size: 30px;
+	}
+	.banner-sobre{
+		height: 45vh;
+	}
+	.sect1-sobre .container{
+		max-width: 85%;	
+	}
+	.sect1-sobre .container .row .title br{
+		display: none;
+	}
+	.sect1-sobre .container .row .texto, .sect2-sobre .container .texto, .sect3-sobre .container .texto{
+		width: 100%;
+		margin-bottom: 5%;
+		font-size: 13px;
+	}
+	.sect3-sobre .container{
+		max-width: 90%;
+	}
+	.sect3-sobre .container .card-historia .centro .icon{
+	    width: 7vh;
+	    height: 6vh;		
+	}
+	.sect3-sobre .container .card-historia .centro .conteudo .number{
+		font-size: 35px;
+	}
+	.sect3-sobre .container .card-historia .centro .conteudo{
+		width: 80%;
+	}
+	.sect3-sobre .container .card-historia .centro .conteudo .menor{
+		font-size: 13px;
+	}
+	.sect3-sobre .container .card-historia .centro{
+		height: 27vh;
+	}
+	.sect4-sobre .container .row .texto{
+		width: 100%;
+		font-size: 13px;
+	}
+	.sect4-sobre .container .row .botao{
+		width: 60%;
+	}
+	.sect4-sobre .container .row .botao p{
+		font-size: 13px;
+	}
+	.sect5-sobre{
+		padding: 0 0;
+	}
+	.sect5-sobre .container .slick-arrow{
+		width: 5vh;
+		height: 5vh;
+	}
+	.banner-single .slide .centro .overlay .container .row{
+		width: 100%;
+
+	}
+	.banner-single .slide .centro .overlay .container .alinhamento{
+		display: flex;
+		justify-content: center;
+	}
+	.banner-single .slide .centro .overlay .container .title{
+		text-align: center;
+		font-size: 25px;
+		margin-top: 3%; 
+	}
+	.banner-single .slide{
+		height: 55vh;
+	}
+	.banner-single .slide .centro .overlay{
+		padding-bottom: 25%;
+	}
+	.sect1-single .container .content .endereco{
+		font-size: 13px;
+	}
+	.sect1-single .container .content .comandos .quarto p{
+		font-size: 9px;
+	}
+	.sect1-single .container .content .comandos{
+		width: 100%;
+	}
+	.sect1-single .container .content .comandos .quarto .icon{
+		margin-right: .5vh;
+	}
+	.sect1-single .container .content .texto-conceito{
+		font-size: 13px;
+		width: 100%;
+	}
+	.sect1-single .container .content .botao, .sect1-single .container .content .botao-whats{
+		width: 70%;
+	}
+	.sect1-single .container .content .botao a, .sect1-single .container .content .botao-whats a{
+		height: 7vh;
+	}
+	.sect1-single .container .content .botao-whats a .linha svg, .sect1-single .container .content .botao a .linha svg{
+		width: 60%;
+	}
+	.sect1-single .container{
+		max-width: 85%;
+	}
+	.sect1-single .container .fachada .item{
+		padding: 0;	
+	}
+	.sect1-single .container .galeria-fachadas .img{
+		height: 40vh;
+		margin-top: 10%;
+	}
+	.sect1-single .container .slick-arrow.rightButton {
+	    right: 10%;
+	}
+	.sect1-single .container .slick-arrow.leftButton {
+	    left: 10%;
+	}
+	.sect1-single .container .slick-arrow, .sect1-single .container .galeria-fachadas .slick-dots{
+		bottom: -15%;
+	}	
+	.sect2-single .container .nav-tabs li{
+		margin-bottom: 1vh;
+	}	
+	.sect2-single .container .tab-content .slider-galeria .img, .sect2-single .container .tab-content .slider-planta .img, .sect2-single .container .tab-content .slider-implantacao .img{
+		height: 35vh;
+	}
+	.sect2-single .container .tab-content .slider-galeria-thumbs .item .img, .sect2-single .container .tab-content .slider-planta-thumbs .item .img, .sect2-single .container .tab-content .slider-implantacao-thumbs .item .img{
+		height: 15vh;
+	}
+	.sect2-single .container #video iframe{
+		height: 40vh;
+	}
+	.sect3-single .container .nav-tabs li{
+		margin-bottom: 1vh;
+	}
+	.sect3-single .container .imagem{
+		height: 35vh;
+	}
+	.sect4-single{
+		.container{
+			max-width: 85%;
+		}
+	}
+	.sect4-single .container .content{
+		padding: 10% 0;
+	}
+	.sect4-single .container .texto{
+		font-size: 13px;
+	}
+	.sect4-single .container .imagem-book{
+		height: 45vh;
+	}
+	.sect5-single .container{
+		max-width: 85%;
+	}
+	.sect5-single .container .form{
+		padding:10% 0;
+	}
+	.sect5-single .container .form input[type=submit]{
+		float: inherit;
+	}
+	.sect5-single .container .form .wpcf7-list-item{
+		font-size: 13px;
+	}
+	.sect6-single .container, .sect7-single .container, .sect9-single .container{
+		max-width: 85%;
+	}
+	.sect6-single .container .endereco{
+		font-size: 13px;
+	}
+	.sect6-single .container .mapa iframe{
+		height: 45vh;
+	}
+	.sect7-single .container .content {
+		margin-bottom: 10%;
+	}
+	.sect8-single .container .endereco .button p{
+		font-size: 13px;
+	}
+	.sect7-single .container .content .img{
+		height: 40vh;
+	}
+	.sect9-single .container .cont iframe{
+		height: 22vh;
+	}
+	.sect10-single .container .btn-todos .botao{
+		width: 60%;
+		margin-bottom: 10%;
+	}
+	.sect10-single .container .card-prod{
+		margin-bottom: 10%;
 	}
 }

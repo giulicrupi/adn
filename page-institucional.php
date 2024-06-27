@@ -52,7 +52,7 @@
 		    <?php while( have_rows('nossa_historia') ): the_row(); 
 		    	$icone	= get_sub_field('icone');
 		        ?>
-				<div class="col-lg-3 p-0">
+				<div class="col-lg-3 p-0 col-6">
 					<div class="card-historia">
 
 						<div class="centro">
