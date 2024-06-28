@@ -289,7 +289,7 @@ input:focus, textarea:focus, button:focus, a:focus, select:focus {
 }
 
 .sect1 {
-  padding: 10vh 0;
+  padding: 10vh 0 0 0;
 }
 @media (min-width: 981px) {
   .sect1 {
@@ -344,7 +344,7 @@ a:hover {
 }
 
 .sect2 {
-  padding: 10vh 0;
+  padding: 10vh 0 0 0;
   position: relative;
 }
 @media (min-width: 981px) {
@@ -544,6 +544,7 @@ a:hover {
 @media (max-width: 980px) {
   .card-do-prod .infos .centro .local, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local, .sect10-single .container .card-prod .infos .centro .local, .sect2 .container .produtos .card-prod .infos .centro .local, .sect2 .container .produtos2 .card-prod .infos .centro .local {
     padding: 0.1vh 2.5vh;
+    width: 50%;
   }
 }
 .card-do-prod .infos .centro .local p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local p, .sect10-single .container .card-prod .infos .centro .local p, .sect2 .container .produtos .card-prod .infos .centro .local p, .sect2 .container .produtos2 .card-prod .infos .centro .local p {
@@ -555,6 +556,11 @@ a:hover {
   .card-do-prod .infos .centro .local p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local p, .sect10-single .container .card-prod .infos .centro .local p, .sect2 .container .produtos .card-prod .infos .centro .local p, .sect2 .container .produtos2 .card-prod .infos .centro .local p {
     font-size: 9px;
     margin-bottom: -5%;
+  }
+}
+@media (max-width: 980px) {
+  .card-do-prod .infos .centro .local .icon, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local .icon, .sect10-single .container .card-prod .infos .centro .local .icon, .sect2 .container .produtos .card-prod .infos .centro .local .icon, .sect2 .container .produtos2 .card-prod .infos .centro .local .icon {
+    width: 20%;
   }
 }
 .card-do-prod .infos .centro .local .icon svg, .sect1-produtos .container .produtos-prod .row .card-prod .infos .centro .local .icon svg, .sect10-single .container .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos .card-prod .infos .centro .local .icon svg, .sect2 .container .produtos2 .card-prod .infos .centro .local .icon svg {
@@ -570,13 +576,18 @@ a:hover {
   justify-content: center;
 }
 .card-do-prod .infos .content .comandos, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos, .sect10-single .container .card-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos, .sect2 .container .produtos2 .card-prod .infos .content .comandos {
-  width: 75%;
+  width: 85%;
   display: flex;
   align-items: center;
 }
 @media (max-width: 980px) {
   .card-do-prod .infos .content .comandos, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos, .sect10-single .container .card-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos, .sect2 .container .produtos2 .card-prod .infos .content .comandos {
     width: 88%;
+  }
+}
+@media (min-width: 1800px) {
+  .card-do-prod .infos .content .comandos, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos, .sect10-single .container .card-prod .infos .content .comandos, .sect2 .container .produtos .card-prod .infos .content .comandos, .sect2 .container .produtos2 .card-prod .infos .content .comandos {
+    width: 85%;
   }
 }
 .card-do-prod .infos .content .comandos .quarto, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto, .sect10-single .container .card-prod .infos .content .comandos .quarto, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto {
@@ -605,7 +616,7 @@ a:hover {
 }
 .card-do-prod .infos .content .comandos .quarto p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto p, .sect10-single .container .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto p {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
 }
 @media (max-width: 980px) {
   .card-do-prod .infos .content .comandos .quarto p, .sect1-produtos .container .produtos-prod .row .card-prod .infos .content .comandos .quarto p, .sect10-single .container .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos .card-prod .infos .content .comandos .quarto p, .sect2 .container .produtos2 .card-prod .infos .content .comandos .quarto p {
@@ -809,8 +820,14 @@ a:hover {
   background-position: center !important;
 }
 
+.desabilitado {
+  opacity: 0.4 !important;
+  pointer-events: none;
+  cursor: default;
+}
+
 .sect5 {
-  padding: 10vh 0;
+  padding: 10vh 0 0 0;
   position: relative;
 }
 @media (min-width: 981px) {
@@ -3182,6 +3199,27 @@ footer .container .linha .column5 .imgs .img .centro {
   opacity: 1;
 }
 
+.sect1 {
+  position: relative;
+}
+.sect1 .container .mascara {
+  -webkit-mask-size: 100% !important;
+  -webkit-mask-position: center !important;
+  -webkit-mask-repeat: no-repeat !important;
+}
+.sect1 .container .forma-1 {
+  position: absolute;
+  z-index: 10;
+  width: 15%;
+  top: 5%;
+}
+.sect1 .container .forma-2 {
+  position: absolute;
+  right: 10%;
+  z-index: 10;
+  bottom: 0;
+}
+
 @media (max-width: 980px) {
   #desk {
     display: none;
@@ -3259,11 +3297,22 @@ footer .container .linha .column5 .imgs .img .centro {
     text-align: center;
     font-size: 25px;
   }
-  .banner-home .banner .slide .centro .overlay .container .comandos, .banner-home .banner .slide .centro .overlay .container .botao {
-    display: none;
+  .banner-home .banner .slide .centro .overlay .container .comandos {
+    width: 100%;
+    margin-top: 8%;
+  }
+  .banner-home .banner .slide .centro .overlay .container .comandos .quarto p {
+    font-size: 11px;
+  }
+  .banner-home .banner .slide .centro .overlay .container .comandos .quarto .icon {
+    width: 3vh;
+    height: 3vh;
+  }
+  .banner-home .banner .slide .centro .overlay .container .comandos .quarto .icon svg {
+    width: 60%;
   }
   .banner-home .banner .slide {
-    height: 45vh;
+    height: 65vh;
   }
   .banner-home .slick-arrow {
     padding: 0;
@@ -3272,6 +3321,9 @@ footer .container .linha .column5 .imgs .img .centro {
   }
   .banner-home .slick-arrow img {
     width: 25%;
+  }
+  .banner-home .banner .slide .centro .overlay {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.168627451) 70%);
   }
   .banner-home .slick-arrow {
     bottom: -14% !important;
@@ -3286,7 +3338,8 @@ footer .container .linha .column5 .imgs .img .centro {
     font-size: 9px;
   }
   .banner-home .banner .slide .centro .overlay .container .row .local .icon, .banner-single .slide .centro .overlay .container .row .local .icon {
-    margin-right: 0.1vh;
+    margin-right: 1px;
+    width: 20%;
   }
   .banner-home .banner .slide .centro .overlay .container .row .local .icon svg, .banner-single .slide .centro .overlay .container .row .local .icon svg {
     width: 60%;
@@ -3295,6 +3348,7 @@ footer .container .linha .column5 .imgs .img .centro {
     font-size: 9px;
     margin-bottom: 0;
     line-height: 110%;
+    width: fit-content;
   }
   .banner-home .banner .slide .centro .overlay .container .row .categoria p, .banner-single .slide .centro .overlay .container .row .local p, .banner-single .slide .centro .overlay .container .row .categoria p {
     font-size: 9px;
@@ -3501,6 +3555,7 @@ footer .container .linha .column5 .imgs .img .centro {
   }
   .sect6 .container .linha .title {
     width: 100%;
+    padding-left: 2%;
   }
   .sect6 {
     padding: 0 0 10vh 0vh;
@@ -3862,6 +3917,107 @@ footer .container .linha .column5 .imgs .img .centro {
     justify-content: center;
     align-items: center;
   }
+  .sect1-single .container .content .botao a .linha .icon {
+    width: 20%;
+  }
+  .sect1-single .container .content .botao-whats a .linha .icon {
+    width: 15%;
+  }
+  .sect6 .draggable {
+    padding-left: 0 !important;
+  }
+  .sect6 .draggable .item {
+    padding: 1%;
+  }
+  .sect6 .container {
+    padding-left: 6%;
+    max-width: 100%;
+    padding-right: 0 !important;
+  }
+  .sect6 .container .slick-arrow {
+    background: #0071CE;
+    width: 4vh;
+    height: 4vh;
+    right: 4%;
+    padding: 0;
+  }
+  .sect6 .container .slick-arrow img {
+    width: 50%;
+  }
+  .sect6 .container .slick-arrow.leftButton {
+    bottom: 40%;
+  }
+  .sect6 .container .slick-arrow.rightButton {
+    bottom: 51%;
+  }
+  .sect6 .container .slick-arrow.slick-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+  }
+  .sect6 .slick-arrow {
+    padding: 0 !important;
+    width: 5vh !important;
+    height: 5vh !important;
+  }
+  .sect6 .slick-arrow img {
+    width: 25% !important;
+  }
+  .sect6 .slick-arrow {
+    bottom: 6% !important;
+  }
+  .sect6 .slick-arrow.rightButton {
+    right: 40% !important;
+  }
+  .sect6 .slick-arrow.leftButton {
+    left: 40% !important;
+  }
+  .sect5 .container.fluido {
+    top: 19%;
+  }
+  .sect5 .cont {
+    height: 65vh;
+  }
+  footer .cont-2 .bars {
+    font-size: 25px;
+  }
+  .siga {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    background: #3CB4E5;
+  }
+  .siga .container {
+    max-width: 98%;
+    border-radius: 0;
+    padding: 8% 3%;
+  }
+  .sect1 .container .forma-2 {
+    position: absolute;
+    right: 10%;
+    z-index: 10;
+    bottom: -17%;
+    width: 15%;
+  }
+  .sect1 .container .forma-1 {
+    top: -23%;
+  }
+  .banner-home .banner .slide .centro .overlay .container .botao {
+    margin-top: 5%;
+  }
+  .banner-home .banner .slide .centro .overlay .container .botao button {
+    width: 60%;
+    height: 5vh;
+    font-size: 13px;
+  }
+  .banner-home .banner .slide .centro .overlay .container .botao button span {
+    margin-right: 0.5vh;
+  }
+  .banner-home .banner .slide .centro .overlay .container .botao button svg {
+    width: 12%;
+  }
+}
+.sect6 .container .slick-arrow {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

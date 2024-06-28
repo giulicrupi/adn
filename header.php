@@ -45,10 +45,10 @@
           <a class="nav-link" href="<?php echo site_url(); ?>/contato/">Contato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link desabilitado" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo site_url(); ?>/institucional/">Institucional</a>
+          <a class="nav-link desabilitado" href="<?php echo site_url(); ?>/institucional/">Institucional</a>
         </li>        
       </ul>
 

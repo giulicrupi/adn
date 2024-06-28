@@ -136,7 +136,25 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Group-1171275076.png" alt="" class="img-fluid">
+					<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Group-1171275076.png" alt="" class="img-fluid"> -->
+					<svg class="forma-1" xmlns="http://www.w3.org/2000/svg" width="117" height="266" viewBox="0 0 117 266" fill="none">
+					<path d="M117 65.3136V236.899C117 259.268 92.6496 273.252 73.1652 262.067L16.8637 229.741C6.42776 223.748 0 212.671 0 200.686V29.1009C0 6.73201 24.3504 -7.25185 43.8348 3.93924L100.136 36.2661C110.572 42.2582 117 53.3293 117 65.3136Z" fill="#FFD100"/>
+					</svg>	
+					<svg class="forma-2" xmlns="http://www.w3.org/2000/svg" width="94" height="215" viewBox="0 0 94 215" fill="none">
+					  <g clip-path="url(#clip0_194_204)">
+					    <path d="M94 52.791V191.479C94 209.559 74.4364 220.861 58.7823 211.821L13.5486 185.693C5.16418 180.849 0 171.895 0 162.209V23.5213C0 5.44119 19.5636 -5.86155 35.2177 3.18388L80.4514 29.3127C88.8358 34.156 94 43.1044 94 52.791Z" fill="#0071CE"/>
+					  </g>
+					  <defs>
+					    <clipPath id="clip0_194_204">
+					      <rect width="94" height="215" fill="white"/>
+					    </clipPath>
+					  </defs>
+					</svg>									
+					<div class="mascara" style="-webkit-mask-image: url(<?php echo site_url(); ?>/wp-content/uploads/2024/06/Vector-1-1.png);">	
+						<video id="myVideo" width="100%" autoplay="autoplay" muted="false" playsinline="" loop="">
+					            <source src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/RENDER_FOTOS_ADN.mp4" type="video/mp4">
+					     </video>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -187,9 +205,21 @@
 							?> 
 
 							<div class="item">
-								<a href="<?php the_permalink(); ?>">
+								<?php 
+
+									$imagem_do_banner = have_rows('imagem_do_banner', false);
+									if (!empty($imagem_do_banner)) {
+								?>									
+									<a href="<?php the_permalink(); ?>">
+								<?php 	} ?>		
 									<?php get_template_part( 'templates-part/cardProd' ); ?>
+							<?php 
+
+									$imagem_do_banner = have_rows('imagem_do_banner', false);
+									if (!empty($imagem_do_banner)) {
+								?>										
 								</a>
+							<?php 	} ?>	
 							</div>
 							
 						<?php endwhile; ?>		

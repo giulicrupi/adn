@@ -12,7 +12,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="row">
+			<div class="blog">
 	     <?php
 	          $cont = 0;
 	          $args = array(
@@ -28,7 +28,7 @@
 	          if ($loop->have_posts()) :
 	              while ($loop->have_posts()) : $loop->the_post();
 	                  ?>                
-	                  <div class="col-lg-4 col-12">	
+	                  <div class="item">	
 	                  	<a href="<?php the_permalink(); ?>">
 	                  	<div class="card-blog">
 							<?php
@@ -83,6 +83,8 @@
 	              wp_reset_postdata();
 	          endif;
 	          ?>   				
-			</div>			
+			</div>	
+			<button id="prevBlog" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>	
+			<button id="nextBlog" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>						
 		</div>
 	</section>	

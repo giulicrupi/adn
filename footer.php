@@ -201,8 +201,11 @@
               <div class="bars" id="click-bar"> 
                   <i class="fa-solid fa-bars"></i>
               </div>  
-              <p class="texto-legal"><small>ADN Construtora © 2022 Direitos Reservados - Desenvolvido por MCIA</small></p>
+              
           </div>  
+        </div>
+        <div class="col-lg-12">
+          <p class="texto-legal"><small>ADN Construtora © 2022 Direitos Reservados - Desenvolvido por MCIA</small></p>
         </div>
       </div>
       <div class="closed">
@@ -530,6 +533,29 @@
               settings: {
               slidesToShow: 1,
               centerPadding: '130px',
+               centerMode: true,
+              
+              }
+            }
+          ]});
+
+
+          $(".blog").slick({
+        centerMode: false,
+        slidesToShow: 3 ,
+       
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevBlog',
+          nextArrow: '#nextBlog',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+              centerPadding: '50px',
                centerMode: true,
               
               }
