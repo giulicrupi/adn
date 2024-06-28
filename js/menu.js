@@ -109,4 +109,8 @@ $(document).ready(function(){
         $(".menu-mobile").toggleClass("ativo");
         $(".btn-expand").toggleClass("ativo");
     });
+    $("#click-bar").click(function(){
+        $(".closed").toggleClass("abrir");
+        
+    });    
 });

@@ -3966,4 +3966,66 @@ footer{
 	.sect10-single .container .card-prod{
 		margin-bottom: 10%;
 	}
+	footer{
+		.closed{
+			height: 0vh;
+			overflow: hidden;
+			transition: .5s;
+			&.abrir{
+				height: 70vh;
+			}
+			.line{
+				display: flex;
+				flex-wrap: wrap;
+				.column3{
+					width: 50%;
+					padding-top: 15%;
+					.title-footer{
+						font-size: 20px;
+						font-weight: 600;
+					}
+					.linkfooter{
+						a{
+							display: flex;
+						align-items: center;
+								.mais{
+									width: 3vh;
+									height: 3vh;
+									border: 1px solid white;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									margin-right: 1vh;
+								}
+						}
+					}
+				}
+				.column4{
+					width: 50%;
+					padding-top: 15%;
+					.title-footer{
+						font-size: 20px;
+						font-weight: 600;
+					}					
+				}
+				.column5{
+					width: 100%;
+					padding-top: 15%;
+					.imgs{
+						display: flex;
+						flex-wrap: wrap;
+						.img{
+							width: 33.33%;
+							background: white;
+
+							border-radius: 10px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+						}
+					}
+				}
+			}
+		}
+	}
 }
