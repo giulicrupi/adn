@@ -74,7 +74,10 @@ p{
 						opacity: 1;
 				        padding-right: 1rem;
 				        padding-left: 1rem;		
-				        font-size: 18px;				
+				        font-size: 15px;
+				        @media(min-width: 1400px){
+				        	font-size: 18px;
+				        }				
 						&:hover{
 							opacity: .7;
 						}
@@ -83,10 +86,13 @@ p{
 			}
 		}
 		.botoes{
-		    width: 34%;
+		    width: 36%;
 		    display: flex;
 		    align-items: center;
 		    justify-content: flex-end;
+		     @media(min-width: 1400px){
+		     	width: 34%;
+		     }
 		    .cliente,.whats{
 				display: flex;
 			    align-items: center;
@@ -95,6 +101,24 @@ p{
 			    margin: 0 2vh;
 			    transition: .5s;
 			    cursor: pointer;
+			    p{
+			    	font-size: 14px;
+			    }
+			    .icon{
+			    	svg{
+			    		width: 80%;
+			    	}
+			    }
+			    @media(min-width: 1400px){
+			    	p{
+			    		font-size: 16px;
+			    	}
+			    	.icon{
+			    		svg{
+			    			width: 90%;
+			    		}
+			    	}
+			    }
 
 			    
 		    }
@@ -160,7 +184,7 @@ p{
 					height: 100%;
 					display: flex;
 					align-items: center;
-					padding-top: 5%;
+					padding-top: 9%;
 					.container{
 						width: 100%;
 						color: white;
@@ -176,10 +200,22 @@ p{
 								border-radius: 50px;
 								.icon{
 									margin-right: 1vh;
+									svg{
+										width: 85%;
+									}
+									@media(min-width: 1400px){
+										svg{
+											width: fit-content;
+										}
+									}
 								}
 								p{
 									font-size: 15px;
 								}
+							}
+							.padding{
+								padding: 0 2%;
+
 							}
 							.categoria{
 								display: flex;
@@ -192,14 +228,21 @@ p{
 								border-radius: 50px;
 								color: black;
 								p{
-									font-size: 15px;
+									font-size: 14px;
+									@media(min-width: 1400px){
+										font-size: 15px;
+									}
 								}
+
 							}
 						}
 						.title{
-							font-size: 63px;
+							font-size: 50px;
 							font-weight: 700;
 							margin: 1% 0;
+							@media(min-width: 1400px){
+								font-size: 63px;
+							}
 						}
 						.comandos{
 							width: 45%;
@@ -221,7 +264,10 @@ p{
 								}
 								p{
 									font-weight: 400;
-									font-size: 21px;
+									font-size: 16px;
+									@media(min-width: 1400px){
+										font-size: 21px;
+									}
 								}
 							}
 						}
@@ -232,10 +278,13 @@ p{
 								border: 1px solid $vermelho;
 								color: white;
 								width: 30%;
-								height: 7vh;
+								height: 8vh;
 								border-radius: 50px;
 								font-size: 20px;
-								font-weight: 600;
+								font-weight: 800;
+								@media(min-width: 1400px){
+									height: 8vh;
+								}
 								span{
 									margin-right: 3vh;
 								}
@@ -286,7 +335,7 @@ input,textarea,button,a, select{
 }
 
 .titulo{
-	font-size: 35px;
+	font-size: 32px;
 	line-height: 120%;
 	font-weight: 700;
 	color: $cinza;
@@ -295,6 +344,9 @@ input,textarea,button,a, select{
 	}	
 	@media(max-width: 980px){
 		font-size: 26px;
+	}
+	@media(min-width: 1400px){
+		font-size: 35px;
 	}
 }
 .sect1{
@@ -318,8 +370,11 @@ input,textarea,button,a, select{
 .form-sec {
 	  position: relative;
 	  display: inline-block;
-	  width: 60%;
+	  width: 75%;
 	  margin-top: 3%;
+	  @media(min-width: 1400px){
+	  	width: 80%;
+	  }
 		 select {
 		  appearance: none; /* Para navegadores modernos */
 		  -webkit-appearance: none; /* Para navegadores baseados em WebKit */
@@ -328,21 +383,26 @@ input,textarea,button,a, select{
 		  border: 1px solid #ccc;
 		  padding: 2% 8%;
 		  padding-right: 30px; /* Espaço para o ícone personalizado */
-		  font-size: 16px;
+		  font-size: 20px;
+
 		  width: 100%;
 		  border-radius: 50px;
 		  color: $azul;
-		  font-weight: 600;
-		  font-size: 18px;
+		  font-weight: 800;
+		  @media(min-width: 1400px){
+		  	font-size: 25px;
+		  }
+		  
 		} 
 		&::after {
 		  content: '▼'; /* Seta personalizada */
 		  position: absolute;
 		  top: 50%;
-		  right: 6%;
+		  right: 10%;
 		  transform: translateY(-50%);
 		  pointer-events: none; 
 		  color: $azulClaro;
+		  font-size: 25px;
 		}
 
 }
@@ -363,7 +423,7 @@ a{
     position: relative;
 
 	.container{
-		max-width: 79%;
+		max-width: 82%;
 		position: relative;
 		z-index: 10;
 		.title{
@@ -405,13 +465,14 @@ a{
 		.linha{
 			display: flex;
 			align-items: center;
+			padding:0 1.5%;
 			.title{
 				display: flex;
 				align-items: center;
 				width: 80%;
 				.filtro{
 					padding-left:4%;
-					width: 27%;
+					width: 32%;
 					font-size: 16px;
 					  position: relative;
 					  display: inline-block;	
@@ -428,7 +489,10 @@ a{
 					  border-radius: 50px;
 					  color: black;
 					  font-weight: 600;
-					  font-size: 16px;
+					  font-size: 13px;
+					  @media(min-width: 1400px){
+					  	font-size: 16px;
+					  }
 					} 
 					&::after {
 					  content: '▼'; /* Seta personalizada */
@@ -442,7 +506,7 @@ a{
 				}
 			}
 			.botao{
-			    width: 15%;
+			    width: 16%;
 			    display: flex;
 			    justify-content: flex-end;
 			    align-items: center;
@@ -464,6 +528,10 @@ a{
 					    padding: 1vh 6vh 1vh 5vh;
 					    border-radius: 50px;
 					    transition: .5s;
+					    font-size: 13px;
+					    @media(min-width: 1400px){
+					    	font-size: 16px;
+					    }
 
 				    }	
 				    .mais{
@@ -515,13 +583,16 @@ a{
 		}
 		.categoria{
 			background: $amarelo;
-			padding: .5vh 3vh;
+			padding: .8vh 3vh;
 			width: fit-content;
-			font-size: 14px;
+			font-size: 12px;
 			font-weight: 800;
 			border-radius: 50px;
 			@media(max-width: 980px){
 				font-size: 9px;
+			}
+			@media(min-width: 1400px){
+				font-size: 14px;
 			}
 		}
 	}
@@ -533,7 +604,7 @@ a{
 			font-size: 25px;
 			margin-bottom: 2%;
 			text-align: center;
-			font-weight: 600;
+			font-weight: 800;
 			color: $cinza;
 			@media(max-width: 980px){
 				font-size: 18px;
@@ -545,7 +616,7 @@ a{
 			justify-content: center;
 			margin-bottom: 2%;
 			@media(max-width: 980px){
-				justify-content: start;
+				justify-content: center;
 			}
 			.local{
 				background: $azul;
@@ -637,7 +708,7 @@ a{
 					border: 1px solid $vermelho;
 					color: white;
 					width: 100%;
-					height: 5vh;
+					height: 6vh;
 					border-radius: 50px;
 					transition: .5s;
 
@@ -648,7 +719,7 @@ a{
 					span{
 						margin-right: 1vh;
 						font-size: 14px;
-						font-weight: 500;
+						font-weight: 700;
 						@media(max-width: 980px){
 							font-size: 9px;
 						}
@@ -715,6 +786,7 @@ a{
 			}  
 			.wpcf7-list-item{
 				margin-left: 0;
+				font-size: 10px;
 			}
 			.aceite{
 				margin-top: 5%;
@@ -731,6 +803,12 @@ a{
 					justify-content: center;
 					align-items:center;
 					border-radius: 50%;
+					svg{
+						width: 75%;
+					}
+					p{
+						text-align: center;
+					}
 				}
 				.campo{
 					width: 92%;
@@ -788,15 +866,21 @@ a{
     			.title{
     				@extend .titulo;
     				color: white;
-    				font-size: 30px;
+    				font-size: 26px;
+    				@media(min-width: 1800px){
+    					font-size: 30px;
+    				}
 
     			}
     			.r1{
     				margin-bottom: 12%;
     				align-items: center;
     				.texto-menor{
-    					font-size: 16px;
+    					font-size: 14px;
     					color: white;
+    					@media(min-width: 1800px){
+    						font-size: 16px;
+    					}
     				}
     			}
     			.conteudo{
@@ -811,6 +895,12 @@ a{
 					    top: -9%;
 					    width: 30%;
     			    }    	
+    			    .texto{
+    			    	font-size: 13px;
+    			    	@media(min-width: 1800px){
+    			    		font-size: 16px;
+    			    	}
+    			    }
     				&.claro{
     					background: $azulClaro;
     					color: white;
@@ -889,9 +979,12 @@ a{
 	        }
 	      }
 	      .comentario{
-	        font-size: 14px;
+	        font-size: 10px;
 	        margin-top: 4%;
 	        margin-bottom: 4%;
+	        @media(min-width: 1800px){
+	        	 font-size: 12px;
+	        }
 	      }
 	      .footer-dep{
 	        display: flex;
@@ -934,6 +1027,7 @@ a{
 	    	background: $azul;
 	    	width: 5vh;
 	    	height: 5vh;
+	    	padding: 0;
 	    	border-radius: 50%;
 	    	color: white;
 	    	transition: .5s ;
@@ -941,11 +1035,17 @@ a{
 	    	&:hover{
 	    		opacity: .8;
 	    	}
+	    	svg{
+	    	    margin-bottom: -2px;	
+	    	}
 			&.slick-disabled{
 			    opacity: .5;
 			    pointer-events: none;
 			    cursor: default;			
-			}	    	
+			}	 
+			@media(min-width: 1800px){
+
+			}   	
 	    }	
 	}
 }
@@ -1092,10 +1192,13 @@ a{
 			}
 		}
 		.title-blog{
-			font-size: 22px;
+			font-size: 18px;
 			font-weight: 700;
 			line-height: 140%;
 			margin: 5% 0;
+			@media(min-width: 1800px){
+				font-size: 22px;
+			}
 		}
 		.texto-blog{
 			font-size: 14px;	
@@ -1562,6 +1665,9 @@ footer{
 						max-width: 79%;
 						.row{
 							width: 35%;
+							.padding{
+								padding: 0 2%;
+							}
 							.local{
 								display: flex;
 								align-items: center;
@@ -1569,6 +1675,14 @@ footer{
 								justify-content: center;
 								height: 4.5vh;
 								border-radius: 50px;
+								svg{
+										width: 85%;
+									}
+									@media(min-width: 1400px){
+										svg{
+											width: fit-content;
+										}
+									}								
 								.icon{
 									margin-right: 1vh;
 								}
@@ -1592,9 +1706,12 @@ footer{
 							}
 						}
 						.title{
-							font-size: 63px;
+							font-size: 53px;
 							font-weight: 700;
 							margin: 1% 0;
+							@media(min-width: 1800px){
+								font-size: 63px;
+							}
 						}
 
 
@@ -1696,8 +1813,8 @@ footer{
 				font-size: 18px;
 				text-align: justify;
 				width: 85%;
-				margin-bottom: 6%;
-				margin-top: 6%;
+				margin-bottom: 4%;
+				margin-top: 0%;
 			}  		
 			.botao{
 
@@ -1721,6 +1838,7 @@ footer{
 						align-items: center;		
 							svg{
 								transition: .5s;
+								width: 70%;
 							}
 							p{
 								transition: .5s;
@@ -1765,10 +1883,11 @@ footer{
 						align-items: center;		
 							svg{
 								transition: .5s;
+								width: 70%;
 							}
 							p{
 								transition: .5s;
-								margin-left: 1.5vh;
+								
 								color: white;
 								line-height: 120%;
 								b{
@@ -1794,10 +1913,13 @@ footer{
     	.galeria-fachadas{
     		position: relative;
     		.img{
-    			height: 60vh;
+    			height: 66vh;
     			background-size: cover!important;
     			background-position: center!important;
     			border-radius: 10px;
+    			@media(min-width: 1800px){
+    				height: 60vh;
+    			}
     		}
     		.slick-dots{
     			position: absolute;
@@ -2304,7 +2426,31 @@ footer{
     			}
     		}
     	}
-    }	
+    	.slick-arrow{
+    		display: none;
+    	}
+		.slick-arrow{
+			background: $azul;
+			width: 8vh;
+			height: 8vh;
+			right: 4%;
+			img{
+				width: 50%;
+			}
+			&.leftButton{
+				bottom: 40%;
+			}
+			&.rightButton {
+				bottom: 51%;
+			}
+			&.slick-disabled{
+			    opacity: .5;
+			    pointer-events: none;
+			    cursor: default;			
+			}
+		}    	
+    }
+    position: relative;	
 }
 .sect8-single{
 	padding: 0  0 10vh 0;
@@ -2471,6 +2617,27 @@ footer{
     position: relative;		
 	.container{
 		max-width: 79%;
+		.slick-arrow{
+			background: $azul;
+			width: 8vh;
+			height: 8vh;
+			right: 4%;
+			display: none;
+			img{
+				width: 50%;
+			}
+			&.leftButton{
+				bottom: 40%;
+			}
+			&.rightButton {
+				bottom: 51%;
+			}
+			&.slick-disabled{
+			    opacity: .5;
+			    pointer-events: none;
+			    cursor: default;			
+			}
+		}		
 		.title{
 			@extend .titulo;
 			margin-bottom: 6%;
@@ -3606,6 +3773,7 @@ footer{
 	}
 	.sect3 .container .form .wpcf7-list-item-label{
 		font-size: 9px;
+		margin-left: 1vh;
 	}
 	.sect3 .container .form .wpcf7-list-item label{
 	    display: flex;
@@ -3906,16 +4074,19 @@ footer{
 		font-size: 13px;
 	}
 	.sect1-single .container .content .comandos .quarto p{
-		font-size: 9px;
+		font-size: 13px;
+		margin-left: 1vh;
 	}
 	.sect1-single .container .content .comandos{
 		width: 100%;
 	}
 	.sect1-single .container .content .comandos .quarto .icon{
 		margin-right: .5vh;
+		width: 3.5vh;
+		height: 3.5vh;
 	}
 	.sect1-single .container .content .texto-conceito{
-		font-size: 13px;
+		font-size: 15px;
 		width: 100%;
 	}
 	.sect1-single .container .content .botao, .sect1-single .container .content .botao-whats{
@@ -3948,6 +4119,15 @@ footer{
 	}	
 	.sect2-single .container .nav-tabs li{
 		margin-bottom: 1vh;
+		a{
+			padding: 0 ;
+			text-align: center;
+			height: 5vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
 	}	
 	.sect2-single .container .tab-content .slider-galeria .img, .sect2-single .container .tab-content .slider-planta .img, .sect2-single .container .tab-content .slider-implantacao .img{
 		height: 35vh;
@@ -4139,10 +4319,10 @@ footer{
 		left: 40%!important;
 	}		
 	.sect5 .container.fluido{
-		top: 19%;
+		top: 22%;
 	}
 	.sect5 .cont{
-		height: 65vh;
+		height: 57vh;
 	}
 	footer .cont-2{
 		.bars{
@@ -4171,9 +4351,14 @@ footer{
 	}
 	.banner-home .banner .slide .centro .overlay .container .botao{
 		margin-top: 5%;
+		display: flex;
+		justify-content: center;
+		a{
+			width: 60%;
+		}
 	}
 	.banner-home .banner .slide .centro .overlay .container .botao button{
-		width: 60%;
+		width: 100%;
 		height: 5vh;
 		font-size: 13px;
 		span{
@@ -4183,6 +4368,125 @@ footer{
 			width: 12%;
 		}
 	}
+	.sect1-single .container .content .comandos .quarto{
+		width: 50%;
+	}
+	.sect1-single .container .content .endereco{
+		font-size: 15px;
+	}
+	.sect1-single .container .content .botao a .linha p, .sect1-single .container .content .botao-whats a .linha p{
+		font-size: 12px;
+	}
+	.sect2-single .container .nav-tabs{
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			width: 50%;
+			margin: 0;
+			padding: 1.5%;
+		}
+	}
+	.sect3-single .container .nav-tabs {
+		display: flex;
+		flex-wrap: wrap; 
+		li{
+			width: 50%;
+			margin: 0;
+			padding: 1.5%;
+			a{
+				padding: 0;
+				text-align: center;
+				height: 5vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	.sect7-single{
+		.draggable{
+			padding-left: 0!important;
+		}
+	}
+	.sect7-single .container .content .botao p{
+		font-size: 13px;
+	}
+	.sect7-single .container .content .botao .icon{
+		margin-right: 1vh;
+		svg{
+			width: 60%;
+		}
+	}
+	.sect7-single .container{
+		padding-left: 8%;
+		max-width: 100%!important;
+		padding-right: 0!important;
+	}
+	.sect7-single{
+		.slick-arrow{
+			display: block;
+		}
+	}
+	.sect7-single .slick-arrow{
+		bottom: 5%!important;
+		width: 5vh!important;
+		height: 5vh!important;
+		padding: 0;
+		img{
+			width: 30%!important;
+		}
+	}
+	.sect7-single .slick-arrow.rightButton{
+		right: 40%;
+	}
+	.sect7-single .slick-arrow.leftButton{
+		left: 40%;
+	}	
+	.sect9-single .container .cont{
+		padding:0 0;
+		background: transparent;
+	}
+	.sect9-single .container .cont iframe{
+		height: 27vh;
+	}
+	.sect9-single .container .title{
+		text-align: center;
+	}
+	.sect10-single .container{
+		max-width: 90%;
+		// padding-right: 0!important;
+		.draggable{
+			padding-left: 0%!important;
+		}
+	}	
+	.sect10-single .container .btn-todos .botao a button{
+		font-size: 13px;
+	}
+	.sect10-single .container .btn-todos .botao a .mais{
+		font-size: 20px;
+	}
+	.sect10-single{
+		.slick-arrow{
+			display: block;
+		}
+	}
+	.sect10-single .slick-arrow{
+		bottom: 5%!important;
+		width: 5vh!important;
+		height: 5vh!important;
+		padding: 0;
+		img{
+			width: 30%!important;
+		}
+	}
+	.sect10-single .slick-arrow.rightButton{
+		right: 40%;
+	}
+	.sect10-single .slick-arrow.leftButton{
+		left: 40%;
+	}	
+
+
 }
 
 .sect6 .container .slick-arrow{

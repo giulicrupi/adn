@@ -207,7 +207,7 @@
 							<div class="item">
 								<?php 
 
-									$imagem_do_banner = have_rows('imagem_do_banner', false);
+									$imagem_do_banner = get_field('imagem_do_banner', false);
 									if (!empty($imagem_do_banner)) {
 								?>									
 									<a href="<?php the_permalink(); ?>">
@@ -215,7 +215,7 @@
 									<?php get_template_part( 'templates-part/cardProd' ); ?>
 							<?php 
 
-									$imagem_do_banner = have_rows('imagem_do_banner', false);
+									$imagem_do_banner = get_field('imagem_do_banner', false);
 									if (!empty($imagem_do_banner)) {
 								?>										
 								</a>
@@ -237,11 +237,11 @@
 		<img src="<?php echo get_template_directory_uri(); ?>/svg/forma-azul.svg" alt="" class="img-fluid forma1">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-4 order-lg-1 order-2 p-r">
+				<div class="col-lg-6 col-4 order-lg-1 order-2 p-r">
 					<img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Rectangle-7-1.png" alt="" class="img-fluid" id="desk">
 					<img src="<?php echo site_url(); ?>/wp-content/uploads/2024/06/Rectangle-7-2.png" alt="" class="img-fluid" id="mob">
 				</div>
-				<div class="col-lg-7 col-8 order-lg-2 order-1 p-l">
+				<div class="col-lg-6 col-8 order-lg-2 order-1 p-l">
 					<div class="form">
 						<p class="title">
 							Fale agora mesmo <br>

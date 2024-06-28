@@ -45,7 +45,7 @@
 										<img src="<?php echo get_template_directory_uri(); ?>/svg/people.svg" alt="" class="img-fluid">
 									</div>
 									<p class="texto">
-										Possuimos diferenciais de inovação e modernidade.										
+										Contribuímos para que milhares de pessoas realizem o sonho de ter um lar para chamar de seu!										
 									</p>				
 								</div>
 							</div>														

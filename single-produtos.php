@@ -49,7 +49,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 					<div class="container">
 						<div class="alinhamento">
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-lg-6 padding">
 								<div class="local">
 									<div class="icon">
 										<svg xmlns="http://www.w3.org/2000/svg" width="17" height="22" viewBox="0 0 17 22" fill="none">
@@ -70,7 +70,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 									</p>														
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-lg-6 padding">
 								<div class="categoria">
 									<p>
 				                        <?php 
@@ -241,7 +241,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 										  <path d="M8.33272 28.4598H21.667C24.266 28.4598 25.5592 27.154 25.5592 24.5298V5.4827C25.5592 2.87109 24.266 1.54016 21.667 1.54016H8.33272C5.74623 1.54016 4.44043 2.87109 4.44043 5.4827V24.5298C4.44043 27.154 5.74623 28.4598 8.33272 28.4598ZM8.43316 26.4383C7.13989 26.4383 6.46189 25.7477 6.46189 24.4921V5.52036C6.46189 4.27734 7.13989 3.56163 8.4457 3.56163H21.5665C22.8723 3.56163 23.5378 4.26475 23.5378 5.52036V24.4921C23.5378 25.7477 22.8723 26.4383 21.5791 26.4383H8.43316ZM10.2537 8.80996H19.771C20.2105 8.80996 20.5495 8.45843 20.5495 8.01893C20.5495 7.59202 20.2105 7.26561 19.771 7.26561H10.2537C9.78916 7.26561 9.4627 7.59202 9.4627 8.01893C9.4627 8.45843 9.78916 8.80996 10.2537 8.80996ZM10.2537 13.1919H19.771C20.2105 13.1919 20.5495 12.8404 20.5495 12.4009C20.5495 11.974 20.2105 11.6476 19.771 11.6476H10.2537C9.78916 11.6476 9.4627 11.974 9.4627 12.4009C9.4627 12.8404 9.78916 13.1919 10.2537 13.1919ZM10.2537 17.5739H14.7613C15.2007 17.5739 15.5397 17.2349 15.5397 16.808C15.5397 16.3686 15.2007 16.0295 14.7613 16.0295H10.2537C9.78916 16.0295 9.4627 16.3686 9.4627 16.808C9.4627 17.2349 9.78916 17.5739 10.2537 17.5739Z" fill="#2F2F2F"/>
 										</svg>								
 									</div>
-									<p>ver <b>ficha técnica</b></p>									
+									<p>Ver <b>ficha técnica</b></p>									
 								</div>					
 							</a>
 						</div>	
@@ -718,11 +718,11 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 		<div class="container">
 			<p class="title text-center">Proximidades</p>
 			<?php if( have_rows('proximidades') ): ?>
-			    <div class="row">
+			    <div class="proximidades">
 			    <?php while( have_rows('proximidades') ): the_row(); 
 			        $image = get_sub_field('imagem_do_local');
 			        ?>
-			        <div class="col-lg-4">
+			        <div class="item">
 			            <div class="content text-center">
 			            	<div class="img" style="background: url(<?php echo $image['url']; ?>);">
 			            		
@@ -744,6 +744,9 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 			    <?php endwhile; ?>
 			    </div>
 			<?php endif; ?>			
+					<button id="prevProx" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>
+				
+				<button id="nextProx" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>			
 		</div>
 	</section>	
 	<?php } ?>
@@ -805,7 +808,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 					</div>
 				</div>
 			</div>	
-			<div class="row">
+			<div class="semelhantes">
 				<?php
 				$featured_posts = get_field('empreendimentos_sugeridos');
 				if( $featured_posts ){ ?>
@@ -818,7 +821,7 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 				        $vagas = get_field( 'vagas', $featured_post->ID );
 				        $metragem = get_field( 'metragem', $featured_post->ID );
 				        ?>
-						<div class="col-lg-4 ">
+						<div class="item ">
 							<a href="<?php echo esc_url( $permalink ); ?>">
 								<div class="card-prod">
 									<div class="img" style="background-image: url(<?php echo $thumbnail; ?>);">
@@ -920,7 +923,10 @@ $imagemApresentacaoDigital = get_field('imagem_da_apresentacao_digital');
 				    <?php endforeach; ?>
 				  
 				<?php } ?>				
-			</div>		
+			</div>	
+					<button id="prevSem" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>
+				
+				<button id="nextSem" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>					
 		</div>
 	</section>
 	<?php } ?>			

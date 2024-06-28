@@ -561,6 +561,48 @@
               }
             }
           ]});
+          $(".proximidades").slick({
+        centerMode: false,
+        slidesToShow: 3 ,
+       
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevProx',
+          nextArrow: '#nextProx',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+              centerPadding: '50px',
+               centerMode: true,
+              
+              }
+            }
+          ]});
+          $(".semelhantes").slick({
+        centerMode: false,
+        slidesToShow: 3 ,
+       
+        arrows: true,
+        infinite: false,
+        
+          prevArrow: '#prevSem',
+          nextArrow: '#nextSem',           
+      
+          responsive: [
+            {
+              breakpoint: 500,
+              settings: {
+              slidesToShow: 1,
+              centerPadding: '50px',
+               centerMode: true,
+              
+              }
+            }
+          ]});
 
     </script>
 
