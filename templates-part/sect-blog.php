@@ -1,4 +1,4 @@
-	<section class="sect6">
+<!-- 	<section class="sect6">
 		<div class="container">
 			<div class="linha">
 				<div class="title">
@@ -87,4 +87,4 @@
 			<button id="prevBlog" class="leftButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/left.svg" alt="" class="img-fluid"></button>	
 			<button id="nextBlog" class="rightButton"><img src="<?php echo get_template_directory_uri(); ?>/svg/right.svg" alt="" class="img-fluid"></button>						
 		</div>
-	</section>	
+	</section>	 -->

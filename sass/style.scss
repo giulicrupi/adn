@@ -933,7 +933,7 @@ a{
     cursor: default;
 }
 .sect5{
-	padding: 10vh 0 0 0;
+	padding: 10vh 0 10vh 0;
     @media(min-width: 981px){
      max-width: 1800px;
      margin: auto;	   	
@@ -1738,6 +1738,7 @@ footer{
 		background: $azulClaro;
 		border: 1px solid $azulClaro;
 		border-radius: 50%;
+		padding: 0 ;
 	}
 	.tecnica{
 		.topico{
@@ -4413,6 +4414,7 @@ footer{
 	}
 	.sect7-single .container .content .botao .icon{
 		margin-right: 1vh;
+		width: 8%;
 		svg{
 			width: 60%;
 		}

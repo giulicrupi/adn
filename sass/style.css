@@ -939,7 +939,7 @@ a:hover {
 }
 
 .sect5 {
-  padding: 10vh 0 0 0;
+  padding: 10vh 0 10vh 0;
   position: relative;
 }
 @media (min-width: 981px) {
@@ -1717,6 +1717,7 @@ footer .container .linha .column5 .imgs .img .centro {
   background: #3CB4E5;
   border: 1px solid #3CB4E5;
   border-radius: 50%;
+  padding: 0;
 }
 .modal .tecnica .topico .nome-top {
   font-size: 18px;
@@ -4267,6 +4268,7 @@ footer .container .linha .column5 .imgs .img .centro {
   }
   .sect7-single .container .content .botao .icon {
     margin-right: 1vh;
+    width: 8%;
   }
   .sect7-single .container .content .botao .icon svg {
     width: 60%;
