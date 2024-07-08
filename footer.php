@@ -113,9 +113,9 @@
             </a>
           </div> 
           <div class="linkfooter">
-            <a href="#">
+            <a href="<?php echo site_url(); ?>/ouvidoria/">
               <div class="mais">+</div>
-              <p class="link">Imprensa</p>              
+              <p class="link">ouvidoria</p>              
             </a>
           </div>                              
         </div>
